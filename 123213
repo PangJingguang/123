@@ -1,26 +1,18 @@
 [ 95%] Building CXX object rgbdslam_v2-kinetic/CMakeFiles/rgbdslam.dir/src/graph_manager.cpp.o
 [ 96%] Building CXX object rgbdslam_v2-kinetic/CMakeFiles/rgbdslam.dir/src/transformation_estimation.cpp.o
 /home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/src/transformation_estimation.cpp: In function ‘void optimizerSetup(g2o::SparseOptimizer&)’:
-/home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/src/transformation_estimation.cpp:44:77: error: cannot convert ‘g2o::LinearSolverCholmod<Eigen::Matrix<double, 6, 6> >*’ to ‘g2o::BlockSolver<g2o::BlockSolverTraits<-1, -1> >::LinearSolverType* {aka g2o::LinearSolver<Eigen::Matrix<double, -1, -1> >*}’ in initialization
-       = new g2o::LinearSolverCholmod<g2o ::BlockSolver_6_3::PoseMatrixType>();
-                                                                             ^
-/home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/src/transformation_estimation.cpp:48:43: error: no matching function for call to ‘g2o::BlockSolver<g2o::BlockSolverTraits<-1, -1> >::BlockSolver(g2o::BlockSolver<g2o::BlockSolverTraits<-1, -1> >::LinearSolverType*&)’
-       = new g2o::BlockSolverX(linearSolver);
-                                           ^
-In file included from /usr/local/include/g2o/core/block_solver.h:199:0,
-                 from /home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/src/transformation_estimation.cpp:6:
-/usr/local/include/g2o/core/block_solver.hpp:40:1: note: candidate: g2o::BlockSolver<Traits>::BlockSolver(std::unique_ptr<typename Traits::LinearSolverType>) [with Traits = g2o::BlockSolverTraits<-1, -1>; typename Traits::LinearSolverType = g2o::LinearSolver<Eigen::Matrix<double, -1, -1> >]
- BlockSolver<Traits>::BlockSolver(std::unique_ptr<LinearSolverType> linearSolver)
- ^
-/usr/local/include/g2o/core/block_solver.hpp:40:1: note:   no known conversion for argument 1 from ‘g2o::BlockSolver<g2o::BlockSolverTraits<-1, -1> >::LinearSolverType* {aka g2o::LinearSolver<Eigen::Matrix<double, -1, -1> >*}’ to ‘std::unique_ptr<g2o::LinearSolver<Eigen::Matrix<double, -1, -1> >, std::default_delete<g2o::LinearSolver<Eigen::Matrix<double, -1, -1> > > >’
-/home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/src/transformation_estimation.cpp:50:103: error: no matching function for call to ‘g2o::OptimizationAlgorithmGaussNewton::OptimizationAlgorithmGaussNewton(g2o::BlockSolverX*&)’
-   g2o::OptimizationAlgorithmGaussNewton* solver = new g2o::OptimizationAlgorithmGaussNewton(solver_ptr);
+/home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/src/transformation_estimation.cpp:46:71: error: ‘LinearSolverCSparse’ in namespace ‘g2o’ does not name a template type
+ std::unique_ptr<BlockSolverX::LinearSolverType> linearSolver(new g2o::LinearSolverCSparse<g2o::BlockSolverX::PoseMatrixType>());
+                                                                       ^
+/home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/src/transformation_estimation.cpp:46:124: error: expected primary-expression before ‘>’ token
+ std::unique_ptr<BlockSolverX::LinearSolverType> linearSolver(new g2o::LinearSolverCSparse<g2o::BlockSolverX::PoseMatrixType>());
+                                                                                                                            ^
+/home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/src/transformation_estimation.cpp:46:126: error: expected primary-expression before ‘)’ token
+ std::unique_ptr<BlockSolverX::LinearSolverType> linearSolver(new g2o::LinearSolverCSparse<g2o::BlockSolverX::PoseMatrixType>());
+                                                                                                                              ^
+/home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/src/transformation_estimation.cpp:57:103: error: ‘solver_ptr’ was not declared in this scope
+   g2o::OptimizationAlgorithmGaussNewton* solver = new g2o::OptimizationAlgorithmGaussNewton(std::move(solver_ptr));
                                                                                                        ^
-In file included from /home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/src/transformation_estimation.cpp:21:0:
-/usr/local/include/g2o/core/optimization_algorithm_gauss_newton.h:46:16: note: candidate: g2o::OptimizationAlgorithmGaussNewton::OptimizationAlgorithmGaussNewton(std::unique_ptr<g2o::Solver>)
-       explicit OptimizationAlgorithmGaussNewton(std::unique_ptr<Solver> solver);
-                ^
-/usr/local/include/g2o/core/optimization_algorithm_gauss_newton.h:46:16: note:   no known conversion for argument 1 from ‘g2o::BlockSolverX* {aka g2o::BlockSolver<g2o::BlockSolverTraits<-1, -1> >*}’ to ‘std::unique_ptr<g2o::Solver>’
 /home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/src/graph_manager.cpp: In member function ‘void GraphManager::createOptimizer(std::__cxx11::string, g2o::SparseOptimizer*)’:
 /home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/src/graph_manager.cpp:139:72: error: no matching function for call to ‘g2o::BlockSolver<g2o::BlockSolverTraits<-1, -1> >::BlockSolver(g2o::BlockSolver<g2o::BlockSolverTraits<-1, -1> >::LinearSolverType*&)’
       g2o::BlockSolverX *solver_ptr = new g2o::BlockSolverX(linearSolver);
@@ -101,3 +93,5 @@ CMakeFiles/Makefile2:22750: recipe for target 'rgbdslam_v2-kinetic/CMakeFiles/rg
 make[1]: *** [rgbdslam_v2-kinetic/CMakeFiles/rgbdslam.dir/all] Error 2
 Makefile:138: recipe for target 'all' failed
 make: *** [all] Error 2
+Invoking "make -j4 -l4" failed
+xiaoqiang@xiaoqiang:~/Documents/ros$ 
