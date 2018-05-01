@@ -1,4 +1,9 @@
+[ 95%] Building CXX object rgbdslam_v2-kinetic/CMakeFiles/rgbdslam.dir/src/graph_manager.cpp.o
+[ 96%] Building CXX object rgbdslam_v2-kinetic/CMakeFiles/rgbdslam.dir/src/transformation_estimation.cpp.o
 /home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/src/transformation_estimation.cpp: In function ‘void optimizerSetup(g2o::SparseOptimizer&)’:
+/home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/src/transformation_estimation.cpp:44:77: error: cannot convert ‘g2o::LinearSolverCholmod<Eigen::Matrix<double, 6, 6> >*’ to ‘g2o::BlockSolver<g2o::BlockSolverTraits<-1, -1> >::LinearSolverType* {aka g2o::LinearSolver<Eigen::Matrix<double, -1, -1> >*}’ in initialization
+       = new g2o::LinearSolverCholmod<g2o ::BlockSolver_6_3::PoseMatrixType>();
+                                                                             ^
 /home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/src/transformation_estimation.cpp:48:43: error: no matching function for call to ‘g2o::BlockSolver<g2o::BlockSolverTraits<-1, -1> >::BlockSolver(g2o::BlockSolver<g2o::BlockSolverTraits<-1, -1> >::LinearSolverType*&)’
        = new g2o::BlockSolverX(linearSolver);
                                            ^
@@ -96,5 +101,3 @@ CMakeFiles/Makefile2:22750: recipe for target 'rgbdslam_v2-kinetic/CMakeFiles/rg
 make[1]: *** [rgbdslam_v2-kinetic/CMakeFiles/rgbdslam.dir/all] Error 2
 Makefile:138: recipe for target 'all' failed
 make: *** [all] Error 2
-Invoking "make -j4 -l4" failed
-xiaoqiang@xiaoqiang:~/Documents/ros$ 
