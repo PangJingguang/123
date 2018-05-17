@@ -1,0 +1,34 @@
+[roslaunch][INFO] 2018-05-17 17:19:42,696: process[rgbdslam-1]: args[[u'/home/xiaoqiang/catkin_ws/devel/lib/rgbdslam/rgbdslam', u'__name:=rgbdslam']]
+[roslaunch][INFO] 2018-05-17 17:19:42,697: ... created process [rgbdslam-1]
+[roslaunch.pmon][INFO] 2018-05-17 17:19:42,697: ProcessMonitor.register[rgbdslam-1]
+[roslaunch.pmon][INFO] 2018-05-17 17:19:42,697: ProcessMonitor.register[rgbdslam-1] complete
+[roslaunch][INFO] 2018-05-17 17:19:42,697: ... registered process [rgbdslam-1]
+[roslaunch][INFO] 2018-05-17 17:19:42,697: process[rgbdslam-1]: starting os process
+[roslaunch][INFO] 2018-05-17 17:19:42,697: process[rgbdslam-1]: start w/ args [[u'/home/xiaoqiang/catkin_ws/devel/lib/rgbdslam/rgbdslam', u'__name:=rgbdslam', u'__log:=/home/xiaoqiang/.ros/log/55605fe2-59b0-11e8-b82a-49764139c3ae/rgbdslam-1.log']]
+[roslaunch][INFO] 2018-05-17 17:19:42,697: process[rgbdslam-1]: cwd will be [/home/xiaoqiang/.ros]
+[roslaunch][INFO] 2018-05-17 17:19:42,701: process[rgbdslam-1]: started with pid [5101]
+[roslaunch][INFO] 2018-05-17 17:19:42,701: ... successfully launched [rgbdslam-1]
+[roslaunch][INFO] 2018-05-17 17:19:42,702: ... launch_nodes complete
+[roslaunch.pmon][INFO] 2018-05-17 17:19:42,702: registrations completed <ProcessMonitor(ProcessMonitor-1, started daemon 139745193928448)>
+[roslaunch.parent][INFO] 2018-05-17 17:19:42,702: ... roslaunch parent running, waiting for process exit
+[roslaunch][INFO] 2018-05-17 17:19:42,702: spin
+[roslaunch][ERROR] 2018-05-17 17:19:43,002: ================================================================================REQUIRED process [rgbdslam-1] has died!
+process has died [pid 5101, exit code -11, cmd /home/xiaoqiang/catkin_ws/devel/lib/rgbdslam/rgbdslam __name:=rgbdslam __log:=/home/xiaoqiang/.ros/log/55605fe2-59b0-11e8-b82a-49764139c3ae/rgbdslam-1.log].
+log file: /home/xiaoqiang/.ros/log/55605fe2-59b0-11e8-b82a-49764139c3ae/rgbdslam-1*.log
+Initiating shutdown!
+================================================================================
+[roslaunch.pmon][INFO] 2018-05-17 17:19:43,102: ProcessMonitor._post_run <ProcessMonitor(ProcessMonitor-1, started daemon 139745193928448)>
+[roslaunch.pmon][INFO] 2018-05-17 17:19:43,103: ProcessMonitor._post_run <ProcessMonitor(ProcessMonitor-1, started daemon 139745193928448)>: remaining procs are [<roslaunch.nodeprocess.LocalProcess object at 0x7f18f6cca1d0>]
+[roslaunch.pmon][INFO] 2018-05-17 17:19:43,103: ProcessMonitor exit: killing rgbdslam-1
+[roslaunch][INFO] 2018-05-17 17:19:43,103: [rgbdslam-1] killing on exit
+[roslaunch.pmon][INFO] 2018-05-17 17:19:43,105: ProcessMonitor exit: cleaning up data structures and signals
+[roslaunch.pmon][INFO] 2018-05-17 17:19:43,106: ProcessMonitor exit: pmon has shutdown
+[roslaunch][INFO] 2018-05-17 17:19:43,203: process monitor is done spinning, initiating full shutdown
+[roslaunch][INFO] 2018-05-17 17:19:43,203: runner.stop()
+[roslaunch][INFO] 2018-05-17 17:19:43,203: shutting down processing monitor...
+[roslaunch][INFO] 2018-05-17 17:19:43,203: shutting down processing monitor <ProcessMonitor(ProcessMonitor-1, stopped daemon 139745193928448)>
+[roslaunch.pmon][INFO] 2018-05-17 17:19:43,204: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, stopped daemon 139745193928448)>
+[roslaunch][INFO] 2018-05-17 17:19:43,204: ... shutting down processing monitor complete
+[roslaunch][INFO] 2018-05-17 17:19:43,204: done
+[roslaunch.pmon][INFO] 2018-05-17 17:19:43,204: ProcessMonitor.shutdown <ProcessMonitor(ProcessMonitor-1, stopped daemon 139745193928448)>
+[rospy.core][INFO] 2018-05-17 17:19:43,204: signal_shutdown [atexit]
