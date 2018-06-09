@@ -1,35 +1,159 @@
-[roslaunch][INFO] 2018-05-11 11:52:49,335: Checking log directory for disk usage. This may take awhile.
-Press Ctrl-C to interrupt
-[roslaunch][INFO] 2018-05-11 11:52:49,338: Done checking log file disk usage. Usage is <1GB.
-[roslaunch][INFO] 2018-05-11 11:52:49,338: roslaunch starting with args ['/opt/ros/kinetic/bin/roslaunch', 'rgbdslam', 'rgbdslam.launch']
-[roslaunch][INFO] 2018-05-11 11:52:49,338: roslaunch env is {'UPSTART_EVENTS': 'started starting', 'XDG_SESSION_TYPE': 'x11', 'LC_PAPER': 'zh_CN.UTF-8', 'SHELL': '/bin/bash', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/var/lib/snapd/desktop', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'COMPIZ_CONFIG_PROFILE': 'ubuntu', 'UPSTART_INSTANCE': '', 'JOB': 'gnome-session', 'XMODIFIERS': '@im=fcitx', 'TURTLEBOT_INTERACTIONS_LIST': '[turtlebot_bringup/admin.interactions, turtlebot_bringup/documentation.interactions, turtlebot_bringup/pairing.interactions, turtlebot_bringup/visualisation.interactions]', 'GTK2_MODULES': 'overlay-scrollbar', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LC_ADDRESS': 'zh_CN.UTF-8', 'PYTHONPATH': '/home/xiaoqiang/Documents/ros/devel/lib/python2.7/dist-packages:/opt/ros/kinetic/lib/python2.7/dist-packages', 'ROS_ROOT': '/opt/ros/kinetic/share/ros', 'QT_ACCESSIBILITY': '1', 'XDG_SESSION_ID': 'c1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-G3Sx7QSBiW', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'DESKTOP_SESSION': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge:unity-gtk-module', 'INSTANCE': 'Unity', 'TURTLEBOT_3D_SENSOR': 'asus_xtion_pro', 'TURTLEBOT_RAPP_PACKAGE_BLACKLIST': '[]', 'LC_NAME': 'zh_CN.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'LC_NUMERIC': 'zh_CN.UTF-8', 'TURTLEBOT_TYPE': 'turtlebot', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'TURTLEBOT_MAP_FILE': '/home/xiaoqiang/Documents/ros/src/turtlebot_apps/turtlebot_navigation/maps/willow-2010-02-18-0.10.yaml', 'USER': 'xiaoqiang', 'XDG_VTNR': '7', 'CMAKE_PREFIX_PATH': '/home/xiaoqiang/Documents/ros/devel:/opt/ros/kinetic', 'XAUTHORITY': '/home/xiaoqiang/.Xauthority', 'LANGUAGE': 'zh_CN:en_US:en', 'SHLVL': '1', 'QT_QPA_PLATFORMTHEME': 'appmenu-qt5', 'DISPLAY': ':0', 'CLUTTER_IM_MODULE': 'xim', 'WINDOWID': '81802216', 'GPG_AGENT_INFO': '/home/xiaoqiang/.gnupg/S.gpg-agent:0:1', 'XDG_SESSION_DESKTOP': 'ubuntu', 'GDMSESSION': 'ubuntu', 'UPSTART_JOB': 'unity-settings-daemon', 'PKG_CONFIG_PATH': '/home/xiaoqiang/Documents/ros/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig', 'ROS_PACKAGE_PATH': '/home/xiaoqiang/Documents/ros/src:/opt/ros/kinetic/share', 'TURTLEBOT_BASE': 'kobuki', '_': '/opt/ros/kinetic/bin/roslaunch', 'GTK_IM_MODULE': 'fcitx', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg', 'TURTLEBOT_BATTERY': '/sys/class/power_supply/BAT0', 'ROS_MASTER_URI': 'http://localhost:11311', 'LC_TIME': 'zh_CN.UTF-8', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/xiaoqiang', 'QT4_IM_MODULE': 'fcitx', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'HOME': '/home/xiaoqiang', 'LD_LIBRARY_PATH': '/home/xiaoqiang/Documents/ros/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu', 'LANG': 'zh_CN.UTF-8', 'ROS_LOG_FILENAME': '/home/xiaoqiang/.ros/log/4fa060f8-54c3-11e8-80c8-0bf61a87a91b/roslaunch-xiaoqiang-13831.log', 'LC_MONETARY': 'zh_CN.UTF-8', 'QT_LINUX_ACCESSIBILITY_ALWAYS_ON': '1', 'TURTLEBOT_SIMULATION': 'false', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'VTE_VERSION': '4205', 'TURTLEBOT_SERIAL_PORT': '/dev/kobuki', 'XDG_CURRENT_DESKTOP': 'Unity', 'TURTLEBOT_NAME': 'turtlebot', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GNOME_KEYRING_PID': '', 'PAPERSIZE': 'a4', 'ROS_ETC_DIR': '/opt/ros/kinetic/etc/ros', 'ROS_DISTRO': 'kinetic', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/xiaoqiang/Documents/ros/devel/share/common-lisp', 'QT_IM_MODULE': 'fcitx', 'LOGNAME': 'xiaoqiang', 'XDG_SEAT': 'seat0', 'GNOME_KEYRING_CONTROL': '', 'PATH': '/home/xiaoqiang/Documents/xiaoqiang-cmds:/home/xiaoqiang/Documents/ros/devel/bin:/opt/ros/kinetic/bin:/home/xiaoqiang/bin:/home/xiaoqiang/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'TERM': 'xterm-256color', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'TURTLEBOT_STACKS': 'hexagons', 'TURTLEBOT_RAPP_PACKAGE_WHITELIST': '[rocon_apps, turtlebot_rapps]', 'SESSIONTYPE': 'gnome-session', 'IM_CONFIG_PHASE': '1', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'UPSTART_SESSION': 'unix:abstract=/com/ubuntu/upstart-session/1000/1160', 'GDM_LANG': 'zh_CN', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'PWD': '/home/xiaoqiang', 'ROS_VERSION': '1'}
-[roslaunch][INFO] 2018-05-11 11:52:49,339: starting in server mode
-[roslaunch.parent][INFO] 2018-05-11 11:52:49,339: starting roslaunch parent run
-[roslaunch][INFO] 2018-05-11 11:52:49,339: loading roscore config file /opt/ros/kinetic/etc/ros/roscore.xml
-[roslaunch][INFO] 2018-05-11 11:52:49,470: Added core node of type [rosout/rosout] in namespace [/]
-[roslaunch.config][INFO] 2018-05-11 11:52:49,470: loading config file /home/xiaoqiang/Documents/ros/src/rgbdslam_v2-kinetic/launch/rgbdslam.launch
-[roslaunch][INFO] 2018-05-11 11:52:49,472: Added node of type [rgbdslam/rgbdslam] in namespace [/]
-[roslaunch][INFO] 2018-05-11 11:52:49,472: ... selected machine [] for node of type [rgbdslam/rgbdslam]
-[roslaunch.pmon][INFO] 2018-05-11 11:52:49,474: start_process_monitor: creating ProcessMonitor
-[roslaunch.pmon][INFO] 2018-05-11 11:52:49,474: created process monitor <ProcessMonitor(ProcessMonitor-1, initial daemon)>
-[roslaunch.pmon][INFO] 2018-05-11 11:52:49,475: start_process_monitor: ProcessMonitor started
-[roslaunch.parent][INFO] 2018-05-11 11:52:49,475: starting parent XML-RPC server
-[roslaunch.server][INFO] 2018-05-11 11:52:49,475: starting roslaunch XML-RPC server
-[roslaunch.server][INFO] 2018-05-11 11:52:49,475: waiting for roslaunch XML-RPC server to initialize
-[xmlrpc][INFO] 2018-05-11 11:52:49,475: XML-RPC server binding to 0.0.0.0:0
-[xmlrpc][INFO] 2018-05-11 11:52:49,475: Started XML-RPC server [http://xiaoqiang:38585/]
-[xmlrpc][INFO] 2018-05-11 11:52:49,476: xml rpc node: starting XML-RPC server
-[roslaunch][INFO] 2018-05-11 11:52:49,487: started roslaunch server http://xiaoqiang:38585/
-[roslaunch.parent][INFO] 2018-05-11 11:52:49,487: ... parent XML-RPC server started
-[roslaunch][INFO] 2018-05-11 11:52:49,488: master.is_running[http://localhost:11311]
-[roslaunch][INFO] 2018-05-11 11:52:49,489: master.is_running[http://localhost:11311]
-[roslaunch][INFO] 2018-05-11 11:52:49,491: ROS_MASTER_URI=http://localhost:11311
-[roslaunch][INFO] 2018-05-11 11:52:49,494: setting /roslaunch/uris/host_xiaoqiang__38585' to http://xiaoqiang:38585/
-[roslaunch][INFO] 2018-05-11 11:52:49,495: load_parameters starting ...
-[roslaunch][INFO] 2018-05-11 11:52:49,508: ... load_parameters complete
-[roslaunch][INFO] 2018-05-11 11:52:49,508: launch_nodes: launching local nodes ...
-[roslaunch][INFO] 2018-05-11 11:52:49,508: ... preparing to launch node of type [rgbdslam/rgbdslam]
-[roslaunch][INFO] 2018-05-11 11:52:49,508: create_node_process: package[rgbdslam] type[rgbdslam] machine[Machine(name[] env_loader[None] address[localhost] ssh_port[22] user[None] assignable[True] timeout[10.0])] master_uri[http://localhost:11311]
-[roslaunch][INFO] 2018-05-11 11:52:49,508: process[rgbdslam-1]: env[{'UPSTART_EVENTS': 'started starting', 'XDG_SESSION_TYPE': 'x11', 'LC_PAPER': 'zh_CN.UTF-8', 'SHELL': '/bin/bash', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/var/lib/snapd/desktop', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'CLUTTER_IM_MODULE': 'xim', 'UPSTART_INSTANCE': '', 'JOB': 'gnome-session', 'XMODIFIERS': '@im=fcitx', 'TURTLEBOT_INTERACTIONS_LIST': '[turtlebot_bringup/admin.interactions, turtlebot_bringup/documentation.interactions, turtlebot_bringup/pairing.interactions, turtlebot_bringup/visualisation.interactions]', 'GTK2_MODULES': 'overlay-scrollbar', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LC_ADDRESS': 'zh_CN.UTF-8', 'PYTHONPATH': '/home/xiaoqiang/Documents/ros/devel/lib/python2.7/dist-packages:/opt/ros/kinetic/lib/python2.7/dist-packages', 'ROS_ROOT': '/opt/ros/kinetic/share/ros', 'QT_ACCESSIBILITY': '1', 'XDG_SESSION_ID': 'c1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:abstract=/tmp/dbus-G3Sx7QSBiW', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'DESKTOP_SESSION': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge:unity-gtk-module', 'INSTANCE': 'Unity', 'TURTLEBOT_3D_SENSOR': 'asus_xtion_pro', 'TURTLEBOT_RAPP_PACKAGE_BLACKLIST': '[]', 'LC_NAME': 'zh_CN.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'LC_NUMERIC': 'zh_CN.UTF-8', 'TURTLEBOT_TYPE': 'turtlebot', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'XDG_CURRENT_DESKTOP': 'Unity', 'TURTLEBOT_MAP_FILE': '/home/xiaoqiang/Documents/ros/src/turtlebot_apps/turtlebot_navigation/maps/willow-2010-02-18-0.10.yaml', 'USER': 'xiaoqiang', 'XDG_VTNR': '7', 'CMAKE_PREFIX_PATH': '/home/xiaoqiang/Documents/ros/devel:/opt/ros/kinetic', 'XAUTHORITY': '/home/xiaoqiang/.Xauthority', 'LANGUAGE': 'zh_CN:en_US:en', 'SHLVL': '1', 'QT_QPA_PLATFORMTHEME': 'appmenu-qt5', 'DISPLAY': ':0', 'COMPIZ_CONFIG_PROFILE': 'ubuntu', 'WINDOWID': '81802216', 'GPG_AGENT_INFO': '/home/xiaoqiang/.gnupg/S.gpg-agent:0:1', 'LANG': 'zh_CN.UTF-8', 'GDMSESSION': 'ubuntu', 'UPSTART_JOB': 'unity-settings-daemon', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'ROS_PACKAGE_PATH': '/home/xiaoqiang/Documents/ros/src:/opt/ros/kinetic/share', 'TURTLEBOT_BASE': 'kobuki', '_': '/opt/ros/kinetic/bin/roslaunch', 'LC_IDENTIFICATION': 'zh_CN.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg', 'TURTLEBOT_BATTERY': '/sys/class/power_supply/BAT0', 'ROS_MASTER_URI': 'http://localhost:11311', 'LC_TIME': 'zh_CN.UTF-8', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/xiaoqiang', 'QT4_IM_MODULE': 'fcitx', 'PKG_CONFIG_PATH': '/home/xiaoqiang/Documents/ros/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig', 'HOME': '/home/xiaoqiang', 'LD_LIBRARY_PATH': '/home/xiaoqiang/Documents/ros/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu', 'XDG_SESSION_DESKTOP': 'ubuntu', 'ROS_LOG_FILENAME': '/home/xiaoqiang/.ros/log/4fa060f8-54c3-11e8-80c8-0bf61a87a91b/roslaunch-xiaoqiang-13831.log', 'LC_MONETARY': 'zh_CN.UTF-8', 'QT_LINUX_ACCESSIBILITY_ALWAYS_ON': '1', 'TURTLEBOT_SIMULATION': 'false', 'GTK_IM_MODULE': 'fcitx', 'VTE_VERSION': '4205', 'TURTLEBOT_SERIAL_PORT': '/dev/kobuki', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'TURTLEBOT_NAME': 'turtlebot', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GNOME_KEYRING_PID': '', 'PAPERSIZE': 'a4', 'ROS_ETC_DIR': '/opt/ros/kinetic/etc/ros', 'ROS_DISTRO': 'kinetic', 'ROSLISP_PACKAGE_DIRECTORIES': '/home/xiaoqiang/Documents/ros/devel/share/common-lisp', 'QT_IM_MODULE': 'fcitx', 'LOGNAME': 'xiaoqiang', 'XDG_SEAT': 'seat0', 'PATH': '/home/xiaoqiang/Documents/xiaoqiang-cmds:/home/xiaoqiang/Documents/ros/devel/bin:/opt/ros/kinetic/bin:/home/xiaoqiang/bin:/home/xiaoqiang/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'GNOME_KEYRING_CONTROL': '', 'TERM': 'xterm-256color', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'TURTLEBOT_STACKS': 'hexagons', 'TURTLEBOT_RAPP_PACKAGE_WHITELIST': '[rocon_apps, turtlebot_rapps]', 'SESSIONTYPE': 'gnome-session', 'IM_CONFIG_PHASE': '1', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'UPSTART_SESSION': 'unix:abstract=/com/ubuntu/upstart-session/1000/1160', 'GDM_LANG': 'zh_CN', 'LC_TELEPHONE': 'zh_CN.UTF-8', 'LC_MEASUREMENT': 'zh_CN.UTF-8', 'PWD': '/home/xiaoqiang', 'ROS_VERSION': '1'}]
-[roslaunch][INFO] 2018-05-11 11:52:49,794: process[rgbdslam-1]: args[[u'/home/xiaoqiang/Documents/ros/devel/lib/rgbdslam/rgbdslam', u'__name:=rgbdslam']]
-[roslaunch][INFO] 2018-05-11 11:52:49,795: ... created process [rgbdsla
+xiaoqiang@xiaoqiang:~$ ls
+123131    1.py  Desktop    get-pip.py  mkl-dnn  Pictures  slamdb     Videos
+12.bag    2     Documents  huaaa       Music    Public    sys        work0.pgm
+1.launch  core  Downloads  maps        note10   setup.py  Templates  work0.yaml
+xiaoqiang@xiaoqiang:~$ cd note10/
+xiaoqiang@xiaoqiang:~/note10$ ls
+code  data  images  models  README.md
+xiaoqiang@xiaoqiang:~/note10$ cd code/
+xiaoqiang@xiaoqiang:~/note10/code$ ls
+=0.9.19            eval.py         pascal_voc_conf.py   train.py
+data_provider.py   image_util.py   pascal_voc_conf.pyc  vgg_ssd_net.py
+data_provider.pyc  image_util.pyc  rename_images.py     vgg_ssd_net.pyc
+DownloadImages.py  infer.py        show_infer_image.py
+xiaoqiang@xiaoqiang:~/note10/code$ paddle version
+/usr/local/bin/paddle: 第 64 行: [: -eq: 需要一元表达式
+PaddlePaddle 0.12.0, compiled with
+    with_avx: OFF
+    with_gpu: OFF
+    with_mkl: ON
+    with_mkldnn: ON
+    with_double: OFF
+    with_python: ON
+    with_rdma: OFF
+    with_timer: OFF
+xiaoqiang@xiaoqiang:~/note10/code$ python2 i
+image_util.py   image_util.pyc  infer.py        
+xiaoqiang@xiaoqiang:~/note10/code$ python2 infer.py 
+I0609 21:47:07.448879 16028 Util.cpp:166] commandline:  --use_gpu=False 
+W0609 21:47:07.448915 16028 CpuId.h:112] PaddlePaddle wasn't compiled to use avx instructions, but these are available on your machine and could speed up CPU computations via CMAKE .. -DWITH_AVX=ON
+[INFO 2018-06-09 21:47:07,460 layers.py:2716] output for conv1_1: c = 64, h = 300, w = 300, size = 5760000
+[INFO 2018-06-09 21:47:07,462 layers.py:2716] output for conv1_2: c = 64, h = 300, w = 300, size = 5760000
+[INFO 2018-06-09 21:47:07,463 layers.py:2858] output for pool1: c = 64, h = 150, w = 150, size = 1440000
+[INFO 2018-06-09 21:47:07,464 layers.py:2716] output for conv2_1: c = 128, h = 150, w = 150, size = 2880000
+[INFO 2018-06-09 21:47:07,465 layers.py:2716] output for conv2_2: c = 128, h = 150, w = 150, size = 2880000
+[INFO 2018-06-09 21:47:07,465 layers.py:2858] output for pool2: c = 128, h = 75, w = 75, size = 720000
+[INFO 2018-06-09 21:47:07,466 layers.py:2716] output for conv3_1: c = 256, h = 75, w = 75, size = 1440000
+[INFO 2018-06-09 21:47:07,467 layers.py:2716] output for conv3_2: c = 256, h = 75, w = 75, size = 1440000
+[INFO 2018-06-09 21:47:07,467 layers.py:2716] output for conv3_3: c = 256, h = 75, w = 75, size = 1440000
+[INFO 2018-06-09 21:47:07,468 layers.py:2858] output for __pool_0__: c = 256, h = 38, w = 38, size = 369664
+[INFO 2018-06-09 21:47:07,469 layers.py:2716] output for conv4_1: c = 512, h = 38, w = 38, size = 739328
+[INFO 2018-06-09 21:47:07,469 layers.py:2716] output for conv4_2: c = 512, h = 38, w = 38, size = 739328
+[INFO 2018-06-09 21:47:07,470 layers.py:2716] output for conv4_3: c = 512, h = 38, w = 38, size = 739328
+[INFO 2018-06-09 21:47:07,470 layers.py:2858] output for __pool_1__: c = 512, h = 19, w = 19, size = 184832
+[INFO 2018-06-09 21:47:07,472 layers.py:2716] output for conv4_3_norm_mbox_loc: c = 12, h = 38, w = 38, size = 17328
+[INFO 2018-06-09 21:47:07,472 layers.py:2716] output for conv4_3_norm_mbox_conf: c = 6, h = 38, w = 38, size = 8664
+[INFO 2018-06-09 21:47:07,473 layers.py:2716] output for conv5_1: c = 512, h = 19, w = 19, size = 184832
+[INFO 2018-06-09 21:47:07,474 layers.py:2716] output for conv5_2: c = 512, h = 19, w = 19, size = 184832
+[INFO 2018-06-09 21:47:07,475 layers.py:2716] output for conv5_3: c = 512, h = 19, w = 19, size = 184832
+[INFO 2018-06-09 21:47:07,476 layers.py:2858] output for __pool_2__: c = 512, h = 19, w = 19, size = 184832
+[INFO 2018-06-09 21:47:07,477 layers.py:2716] output for fc6: c = 1024, h = 19, w = 19, size = 369664
+[INFO 2018-06-09 21:47:07,478 layers.py:2716] output for fc7: c = 1024, h = 19, w = 19, size = 369664
+[INFO 2018-06-09 21:47:07,478 layers.py:2716] output for fc7_mbox_loc: c = 24, h = 19, w = 19, size = 8664
+[INFO 2018-06-09 21:47:07,479 layers.py:2716] output for fc7_mbox_conf: c = 12, h = 19, w = 19, size = 4332
+[INFO 2018-06-09 21:47:07,481 layers.py:2716] output for conv6_1: c = 256, h = 19, w = 19, size = 92416
+[INFO 2018-06-09 21:47:07,481 layers.py:2716] output for conv6_2: c = 512, h = 10, w = 10, size = 51200
+[INFO 2018-06-09 21:47:07,482 layers.py:2716] output for conv6_2_mbox_loc: c = 24, h = 10, w = 10, size = 2400
+[INFO 2018-06-09 21:47:07,483 layers.py:2716] output for conv6_2_mbox_conf: c = 12, h = 10, w = 10, size = 1200
+[INFO 2018-06-09 21:47:07,484 layers.py:2716] output for conv7_1: c = 128, h = 10, w = 10, size = 12800
+[INFO 2018-06-09 21:47:07,484 layers.py:2716] output for conv7_2: c = 256, h = 5, w = 5, size = 6400
+[INFO 2018-06-09 21:47:07,485 layers.py:2716] output for conv7_2_mbox_loc: c = 24, h = 5, w = 5, size = 600
+[INFO 2018-06-09 21:47:07,486 layers.py:2716] output for conv7_2_mbox_conf: c = 12, h = 5, w = 5, size = 300
+[INFO 2018-06-09 21:47:07,486 layers.py:2716] output for conv8_1: c = 128, h = 5, w = 5, size = 3200
+[INFO 2018-06-09 21:47:07,487 layers.py:2716] output for conv8_2: c = 256, h = 3, w = 3, size = 2304
+[INFO 2018-06-09 21:47:07,488 layers.py:2716] output for conv8_2_mbox_loc: c = 24, h = 3, w = 3, size = 216
+[INFO 2018-06-09 21:47:07,488 layers.py:2716] output for conv8_2_mbox_conf: c = 12, h = 3, w = 3, size = 108
+[INFO 2018-06-09 21:47:07,489 layers.py:2858] output for pool6: c = 256, h = 1, w = 1, size = 256
+[INFO 2018-06-09 21:47:07,490 layers.py:2716] output for pool6_mbox_loc: c = 24, h = 1, w = 1, size = 24
+[INFO 2018-06-09 21:47:07,491 layers.py:2716] output for pool6_mbox_conf: c = 12, h = 1, w = 1, size = 12
+OpenCV Error: Assertion failed (size.width>0 && size.height>0) in imshow, file /tmp/binarydeb/ros-kinetic-opencv3-3.3.1/modules/highgui/src/window.cpp, line 331
+Traceback (most recent call last):
+  File "infer.py", line 295, in <module>
+    cv2.imshow("frame",frame)
+cv2.error: /tmp/binarydeb/ros-kinetic-opencv3-3.3.1/modules/highgui/src/window.cpp:331: error: (-215) size.width>0 && size.height>0 in function imshow
+
+xiaoqiang@xiaoqiang:~/note10/code$ python2 infer.py 
+I0609 21:49:11.643337 16122 Util.cpp:166] commandline:  --use_gpu=False 
+W0609 21:49:11.643362 16122 CpuId.h:112] PaddlePaddle wasn't compiled to use avx instructions, but these are available on your machine and could speed up CPU computations via CMAKE .. -DWITH_AVX=ON
+[INFO 2018-06-09 21:49:11,870 layers.py:2716] output for conv1_1: c = 64, h = 300, w = 300, size = 5760000
+[INFO 2018-06-09 21:49:11,871 layers.py:2716] output for conv1_2: c = 64, h = 300, w = 300, size = 5760000
+[INFO 2018-06-09 21:49:11,872 layers.py:2858] output for pool1: c = 64, h = 150, w = 150, size = 1440000
+[INFO 2018-06-09 21:49:11,873 layers.py:2716] output for conv2_1: c = 128, h = 150, w = 150, size = 2880000
+[INFO 2018-06-09 21:49:11,873 layers.py:2716] output for conv2_2: c = 128, h = 150, w = 150, size = 2880000
+[INFO 2018-06-09 21:49:11,874 layers.py:2858] output for pool2: c = 128, h = 75, w = 75, size = 720000
+[INFO 2018-06-09 21:49:11,874 layers.py:2716] output for conv3_1: c = 256, h = 75, w = 75, size = 1440000
+[INFO 2018-06-09 21:49:11,875 layers.py:2716] output for conv3_2: c = 256, h = 75, w = 75, size = 1440000
+[INFO 2018-06-09 21:49:11,876 layers.py:2716] output for conv3_3: c = 256, h = 75, w = 75, size = 1440000
+[INFO 2018-06-09 21:49:11,876 layers.py:2858] output for __pool_0__: c = 256, h = 38, w = 38, size = 369664
+[INFO 2018-06-09 21:49:11,877 layers.py:2716] output for conv4_1: c = 512, h = 38, w = 38, size = 739328
+[INFO 2018-06-09 21:49:11,877 layers.py:2716] output for conv4_2: c = 512, h = 38, w = 38, size = 739328
+[INFO 2018-06-09 21:49:11,878 layers.py:2716] output for conv4_3: c = 512, h = 38, w = 38, size = 739328
+[INFO 2018-06-09 21:49:11,879 layers.py:2858] output for __pool_1__: c = 512, h = 19, w = 19, size = 184832
+[INFO 2018-06-09 21:49:11,880 layers.py:2716] output for conv4_3_norm_mbox_loc: c = 12, h = 38, w = 38, size = 17328
+[INFO 2018-06-09 21:49:11,881 layers.py:2716] output for conv4_3_norm_mbox_conf: c = 6, h = 38, w = 38, size = 8664
+[INFO 2018-06-09 21:49:11,882 layers.py:2716] output for conv5_1: c = 512, h = 19, w = 19, size = 184832
+[INFO 2018-06-09 21:49:11,882 layers.py:2716] output for conv5_2: c = 512, h = 19, w = 19, size = 184832
+[INFO 2018-06-09 21:49:11,883 layers.py:2716] output for conv5_3: c = 512, h = 19, w = 19, size = 184832
+[INFO 2018-06-09 21:49:11,884 layers.py:2858] output for __pool_2__: c = 512, h = 19, w = 19, size = 184832
+[INFO 2018-06-09 21:49:11,885 layers.py:2716] output for fc6: c = 1024, h = 19, w = 19, size = 369664
+[INFO 2018-06-09 21:49:11,886 layers.py:2716] output for fc7: c = 1024, h = 19, w = 19, size = 369664
+[INFO 2018-06-09 21:49:11,886 layers.py:2716] output for fc7_mbox_loc: c = 24, h = 19, w = 19, size = 8664
+[INFO 2018-06-09 21:49:11,887 layers.py:2716] output for fc7_mbox_conf: c = 12, h = 19, w = 19, size = 4332
+[INFO 2018-06-09 21:49:11,888 layers.py:2716] output for conv6_1: c = 256, h = 19, w = 19, size = 92416
+[INFO 2018-06-09 21:49:11,888 layers.py:2716] output for conv6_2: c = 512, h = 10, w = 10, size = 51200
+[INFO 2018-06-09 21:49:11,889 layers.py:2716] output for conv6_2_mbox_loc: c = 24, h = 10, w = 10, size = 2400
+[INFO 2018-06-09 21:49:11,890 layers.py:2716] output for conv6_2_mbox_conf: c = 12, h = 10, w = 10, size = 1200
+[INFO 2018-06-09 21:49:11,890 layers.py:2716] output for conv7_1: c = 128, h = 10, w = 10, size = 12800
+[INFO 2018-06-09 21:49:11,891 layers.py:2716] output for conv7_2: c = 256, h = 5, w = 5, size = 6400
+[INFO 2018-06-09 21:49:11,892 layers.py:2716] output for conv7_2_mbox_loc: c = 24, h = 5, w = 5, size = 600
+[INFO 2018-06-09 21:49:11,892 layers.py:2716] output for conv7_2_mbox_conf: c = 12, h = 5, w = 5, size = 300
+[INFO 2018-06-09 21:49:11,893 layers.py:2716] output for conv8_1: c = 128, h = 5, w = 5, size = 3200
+[INFO 2018-06-09 21:49:11,894 layers.py:2716] output for conv8_2: c = 256, h = 3, w = 3, size = 2304
+[INFO 2018-06-09 21:49:11,895 layers.py:2716] output for conv8_2_mbox_loc: c = 24, h = 3, w = 3, size = 216
+[INFO 2018-06-09 21:49:11,895 layers.py:2716] output for conv8_2_mbox_conf: c = 12, h = 3, w = 3, size = 108
+[INFO 2018-06-09 21:49:11,896 layers.py:2858] output for pool6: c = 256, h = 1, w = 1, size = 256
+[INFO 2018-06-09 21:49:11,897 layers.py:2716] output for pool6_mbox_loc: c = 24, h = 1, w = 1, size = 24
+[INFO 2018-06-09 21:49:11,898 layers.py:2716] output for pool6_mbox_conf: c = 12, h = 1, w = 1, size = 12
+*** Aborted at 1528552154 (unix time) try "date -d @1528552154" if you are using GNU date ***
+PC: @                0x0 (unknown)
+*** SIGFPE (@0x7fb0f66d6f08) received by PID 16122 (TID 0x7fb13b650700) from PID 18446744073548951304; stack trace: ***
+    @     0x7fb13b268390 (unknown)
+    @     0x7fb0f66d6f08 QXcbConnection::touchDeviceForId()
+    @     0x7fb0f66d844d QXcbConnection::xi2SetupDevices()
+    @     0x7fb0f66d8a86 QXcbConnection::initializeXInput2()
+    @     0x7fb0f66b2891 QXcbConnection::QXcbConnection()
+    @     0x7fb0f66b5bad QXcbIntegration::QXcbIntegration()
+    @     0x7fb13b6553ad (unknown)
+    @     0x7fb1123b7d92 QPlatformIntegrationFactory::create()
+    @     0x7fb1123c3fc4 QGuiApplicationPrivate::createPlatformIntegration()
+    @     0x7fb1123c4ecd QGuiApplicationPrivate::createEventDispatcher()
+    @     0x7fb11208c7e6 QCoreApplication::init()
+    @     0x7fb11208c856 QCoreApplication::QCoreApplication()
+    @     0x7fb1123c6cc9 QGuiApplication::QGuiApplication()
+    @     0x7fb1129b1bcd QApplication::QApplication()
+    @     0x7fb117676d48 (unknown)
+    @     0x7fb117684195 cvShowImage
+    @     0x7fb117670669 cv::imshow()
+    @     0x7fb11e54d4b3 (unknown)
+    @           0x4bc3fa PyEval_EvalFrameEx
+    @           0x4b9ab6 PyEval_EvalCodeEx
+    @           0x4eb30f (unknown)
+    @           0x4e5422 PyRun_FileExFlags
+    @           0x4e3cd6 PyRun_SimpleFileExFlags
+    @           0x493ae2 Py_Main
+    @     0x7fb13aead830 __libc_start_main
+    @           0x4933e9 _start
+    @                0x0 (unknown)
+浮点数例外 (核心已转储)
+xiaoqiang@xiaoqiang:~/note10/code$ sudo rm -rf python2
+[sudo] xiaoqiang 的密码： 
+xiaoqiang@xiaoqiang:~/note10/code$ python2
+Python 2.7.12 (default, Dec  4 2017, 14:50:18) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+xiaoqiang@xiaoqiang:~/note10/code$ python2
+Python 2.7.12 (default, Dec  4 2017, 14:50:18) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
