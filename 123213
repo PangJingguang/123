@@ -1,159 +1,72 @@
-xiaoqiang@xiaoqiang:~$ ls
-123131    1.py  Desktop    get-pip.py  mkl-dnn  Pictures  slamdb     Videos
-12.bag    2     Documents  huaaa       Music    Public    sys        work0.pgm
-1.launch  core  Downloads  maps        note10   setup.py  Templates  work0.yaml
-xiaoqiang@xiaoqiang:~$ cd note10/
-xiaoqiang@xiaoqiang:~/note10$ ls
-code  data  images  models  README.md
-xiaoqiang@xiaoqiang:~/note10$ cd code/
-xiaoqiang@xiaoqiang:~/note10/code$ ls
-=0.9.19            eval.py         pascal_voc_conf.py   train.py
-data_provider.py   image_util.py   pascal_voc_conf.pyc  vgg_ssd_net.py
-data_provider.pyc  image_util.pyc  rename_images.py     vgg_ssd_net.pyc
-DownloadImages.py  infer.py        show_infer_image.py
-xiaoqiang@xiaoqiang:~/note10/code$ paddle version
-/usr/local/bin/paddle: 第 64 行: [: -eq: 需要一元表达式
-PaddlePaddle 0.12.0, compiled with
-    with_avx: OFF
-    with_gpu: OFF
-    with_mkl: ON
-    with_mkldnn: ON
-    with_double: OFF
-    with_python: ON
-    with_rdma: OFF
-    with_timer: OFF
-xiaoqiang@xiaoqiang:~/note10/code$ python2 i
-image_util.py   image_util.pyc  infer.py        
-xiaoqiang@xiaoqiang:~/note10/code$ python2 infer.py 
-I0609 21:47:07.448879 16028 Util.cpp:166] commandline:  --use_gpu=False 
-W0609 21:47:07.448915 16028 CpuId.h:112] PaddlePaddle wasn't compiled to use avx instructions, but these are available on your machine and could speed up CPU computations via CMAKE .. -DWITH_AVX=ON
-[INFO 2018-06-09 21:47:07,460 layers.py:2716] output for conv1_1: c = 64, h = 300, w = 300, size = 5760000
-[INFO 2018-06-09 21:47:07,462 layers.py:2716] output for conv1_2: c = 64, h = 300, w = 300, size = 5760000
-[INFO 2018-06-09 21:47:07,463 layers.py:2858] output for pool1: c = 64, h = 150, w = 150, size = 1440000
-[INFO 2018-06-09 21:47:07,464 layers.py:2716] output for conv2_1: c = 128, h = 150, w = 150, size = 2880000
-[INFO 2018-06-09 21:47:07,465 layers.py:2716] output for conv2_2: c = 128, h = 150, w = 150, size = 2880000
-[INFO 2018-06-09 21:47:07,465 layers.py:2858] output for pool2: c = 128, h = 75, w = 75, size = 720000
-[INFO 2018-06-09 21:47:07,466 layers.py:2716] output for conv3_1: c = 256, h = 75, w = 75, size = 1440000
-[INFO 2018-06-09 21:47:07,467 layers.py:2716] output for conv3_2: c = 256, h = 75, w = 75, size = 1440000
-[INFO 2018-06-09 21:47:07,467 layers.py:2716] output for conv3_3: c = 256, h = 75, w = 75, size = 1440000
-[INFO 2018-06-09 21:47:07,468 layers.py:2858] output for __pool_0__: c = 256, h = 38, w = 38, size = 369664
-[INFO 2018-06-09 21:47:07,469 layers.py:2716] output for conv4_1: c = 512, h = 38, w = 38, size = 739328
-[INFO 2018-06-09 21:47:07,469 layers.py:2716] output for conv4_2: c = 512, h = 38, w = 38, size = 739328
-[INFO 2018-06-09 21:47:07,470 layers.py:2716] output for conv4_3: c = 512, h = 38, w = 38, size = 739328
-[INFO 2018-06-09 21:47:07,470 layers.py:2858] output for __pool_1__: c = 512, h = 19, w = 19, size = 184832
-[INFO 2018-06-09 21:47:07,472 layers.py:2716] output for conv4_3_norm_mbox_loc: c = 12, h = 38, w = 38, size = 17328
-[INFO 2018-06-09 21:47:07,472 layers.py:2716] output for conv4_3_norm_mbox_conf: c = 6, h = 38, w = 38, size = 8664
-[INFO 2018-06-09 21:47:07,473 layers.py:2716] output for conv5_1: c = 512, h = 19, w = 19, size = 184832
-[INFO 2018-06-09 21:47:07,474 layers.py:2716] output for conv5_2: c = 512, h = 19, w = 19, size = 184832
-[INFO 2018-06-09 21:47:07,475 layers.py:2716] output for conv5_3: c = 512, h = 19, w = 19, size = 184832
-[INFO 2018-06-09 21:47:07,476 layers.py:2858] output for __pool_2__: c = 512, h = 19, w = 19, size = 184832
-[INFO 2018-06-09 21:47:07,477 layers.py:2716] output for fc6: c = 1024, h = 19, w = 19, size = 369664
-[INFO 2018-06-09 21:47:07,478 layers.py:2716] output for fc7: c = 1024, h = 19, w = 19, size = 369664
-[INFO 2018-06-09 21:47:07,478 layers.py:2716] output for fc7_mbox_loc: c = 24, h = 19, w = 19, size = 8664
-[INFO 2018-06-09 21:47:07,479 layers.py:2716] output for fc7_mbox_conf: c = 12, h = 19, w = 19, size = 4332
-[INFO 2018-06-09 21:47:07,481 layers.py:2716] output for conv6_1: c = 256, h = 19, w = 19, size = 92416
-[INFO 2018-06-09 21:47:07,481 layers.py:2716] output for conv6_2: c = 512, h = 10, w = 10, size = 51200
-[INFO 2018-06-09 21:47:07,482 layers.py:2716] output for conv6_2_mbox_loc: c = 24, h = 10, w = 10, size = 2400
-[INFO 2018-06-09 21:47:07,483 layers.py:2716] output for conv6_2_mbox_conf: c = 12, h = 10, w = 10, size = 1200
-[INFO 2018-06-09 21:47:07,484 layers.py:2716] output for conv7_1: c = 128, h = 10, w = 10, size = 12800
-[INFO 2018-06-09 21:47:07,484 layers.py:2716] output for conv7_2: c = 256, h = 5, w = 5, size = 6400
-[INFO 2018-06-09 21:47:07,485 layers.py:2716] output for conv7_2_mbox_loc: c = 24, h = 5, w = 5, size = 600
-[INFO 2018-06-09 21:47:07,486 layers.py:2716] output for conv7_2_mbox_conf: c = 12, h = 5, w = 5, size = 300
-[INFO 2018-06-09 21:47:07,486 layers.py:2716] output for conv8_1: c = 128, h = 5, w = 5, size = 3200
-[INFO 2018-06-09 21:47:07,487 layers.py:2716] output for conv8_2: c = 256, h = 3, w = 3, size = 2304
-[INFO 2018-06-09 21:47:07,488 layers.py:2716] output for conv8_2_mbox_loc: c = 24, h = 3, w = 3, size = 216
-[INFO 2018-06-09 21:47:07,488 layers.py:2716] output for conv8_2_mbox_conf: c = 12, h = 3, w = 3, size = 108
-[INFO 2018-06-09 21:47:07,489 layers.py:2858] output for pool6: c = 256, h = 1, w = 1, size = 256
-[INFO 2018-06-09 21:47:07,490 layers.py:2716] output for pool6_mbox_loc: c = 24, h = 1, w = 1, size = 24
-[INFO 2018-06-09 21:47:07,491 layers.py:2716] output for pool6_mbox_conf: c = 12, h = 1, w = 1, size = 12
-OpenCV Error: Assertion failed (size.width>0 && size.height>0) in imshow, file /tmp/binarydeb/ros-kinetic-opencv3-3.3.1/modules/highgui/src/window.cpp, line 331
-Traceback (most recent call last):
-  File "infer.py", line 295, in <module>
-    cv2.imshow("frame",frame)
-cv2.error: /tmp/binarydeb/ros-kinetic-opencv3-3.3.1/modules/highgui/src/window.cpp:331: error: (-215) size.width>0 && size.height>0 in function imshow
-
-xiaoqiang@xiaoqiang:~/note10/code$ python2 infer.py 
-I0609 21:49:11.643337 16122 Util.cpp:166] commandline:  --use_gpu=False 
-W0609 21:49:11.643362 16122 CpuId.h:112] PaddlePaddle wasn't compiled to use avx instructions, but these are available on your machine and could speed up CPU computations via CMAKE .. -DWITH_AVX=ON
-[INFO 2018-06-09 21:49:11,870 layers.py:2716] output for conv1_1: c = 64, h = 300, w = 300, size = 5760000
-[INFO 2018-06-09 21:49:11,871 layers.py:2716] output for conv1_2: c = 64, h = 300, w = 300, size = 5760000
-[INFO 2018-06-09 21:49:11,872 layers.py:2858] output for pool1: c = 64, h = 150, w = 150, size = 1440000
-[INFO 2018-06-09 21:49:11,873 layers.py:2716] output for conv2_1: c = 128, h = 150, w = 150, size = 2880000
-[INFO 2018-06-09 21:49:11,873 layers.py:2716] output for conv2_2: c = 128, h = 150, w = 150, size = 2880000
-[INFO 2018-06-09 21:49:11,874 layers.py:2858] output for pool2: c = 128, h = 75, w = 75, size = 720000
-[INFO 2018-06-09 21:49:11,874 layers.py:2716] output for conv3_1: c = 256, h = 75, w = 75, size = 1440000
-[INFO 2018-06-09 21:49:11,875 layers.py:2716] output for conv3_2: c = 256, h = 75, w = 75, size = 1440000
-[INFO 2018-06-09 21:49:11,876 layers.py:2716] output for conv3_3: c = 256, h = 75, w = 75, size = 1440000
-[INFO 2018-06-09 21:49:11,876 layers.py:2858] output for __pool_0__: c = 256, h = 38, w = 38, size = 369664
-[INFO 2018-06-09 21:49:11,877 layers.py:2716] output for conv4_1: c = 512, h = 38, w = 38, size = 739328
-[INFO 2018-06-09 21:49:11,877 layers.py:2716] output for conv4_2: c = 512, h = 38, w = 38, size = 739328
-[INFO 2018-06-09 21:49:11,878 layers.py:2716] output for conv4_3: c = 512, h = 38, w = 38, size = 739328
-[INFO 2018-06-09 21:49:11,879 layers.py:2858] output for __pool_1__: c = 512, h = 19, w = 19, size = 184832
-[INFO 2018-06-09 21:49:11,880 layers.py:2716] output for conv4_3_norm_mbox_loc: c = 12, h = 38, w = 38, size = 17328
-[INFO 2018-06-09 21:49:11,881 layers.py:2716] output for conv4_3_norm_mbox_conf: c = 6, h = 38, w = 38, size = 8664
-[INFO 2018-06-09 21:49:11,882 layers.py:2716] output for conv5_1: c = 512, h = 19, w = 19, size = 184832
-[INFO 2018-06-09 21:49:11,882 layers.py:2716] output for conv5_2: c = 512, h = 19, w = 19, size = 184832
-[INFO 2018-06-09 21:49:11,883 layers.py:2716] output for conv5_3: c = 512, h = 19, w = 19, size = 184832
-[INFO 2018-06-09 21:49:11,884 layers.py:2858] output for __pool_2__: c = 512, h = 19, w = 19, size = 184832
-[INFO 2018-06-09 21:49:11,885 layers.py:2716] output for fc6: c = 1024, h = 19, w = 19, size = 369664
-[INFO 2018-06-09 21:49:11,886 layers.py:2716] output for fc7: c = 1024, h = 19, w = 19, size = 369664
-[INFO 2018-06-09 21:49:11,886 layers.py:2716] output for fc7_mbox_loc: c = 24, h = 19, w = 19, size = 8664
-[INFO 2018-06-09 21:49:11,887 layers.py:2716] output for fc7_mbox_conf: c = 12, h = 19, w = 19, size = 4332
-[INFO 2018-06-09 21:49:11,888 layers.py:2716] output for conv6_1: c = 256, h = 19, w = 19, size = 92416
-[INFO 2018-06-09 21:49:11,888 layers.py:2716] output for conv6_2: c = 512, h = 10, w = 10, size = 51200
-[INFO 2018-06-09 21:49:11,889 layers.py:2716] output for conv6_2_mbox_loc: c = 24, h = 10, w = 10, size = 2400
-[INFO 2018-06-09 21:49:11,890 layers.py:2716] output for conv6_2_mbox_conf: c = 12, h = 10, w = 10, size = 1200
-[INFO 2018-06-09 21:49:11,890 layers.py:2716] output for conv7_1: c = 128, h = 10, w = 10, size = 12800
-[INFO 2018-06-09 21:49:11,891 layers.py:2716] output for conv7_2: c = 256, h = 5, w = 5, size = 6400
-[INFO 2018-06-09 21:49:11,892 layers.py:2716] output for conv7_2_mbox_loc: c = 24, h = 5, w = 5, size = 600
-[INFO 2018-06-09 21:49:11,892 layers.py:2716] output for conv7_2_mbox_conf: c = 12, h = 5, w = 5, size = 300
-[INFO 2018-06-09 21:49:11,893 layers.py:2716] output for conv8_1: c = 128, h = 5, w = 5, size = 3200
-[INFO 2018-06-09 21:49:11,894 layers.py:2716] output for conv8_2: c = 256, h = 3, w = 3, size = 2304
-[INFO 2018-06-09 21:49:11,895 layers.py:2716] output for conv8_2_mbox_loc: c = 24, h = 3, w = 3, size = 216
-[INFO 2018-06-09 21:49:11,895 layers.py:2716] output for conv8_2_mbox_conf: c = 12, h = 3, w = 3, size = 108
-[INFO 2018-06-09 21:49:11,896 layers.py:2858] output for pool6: c = 256, h = 1, w = 1, size = 256
-[INFO 2018-06-09 21:49:11,897 layers.py:2716] output for pool6_mbox_loc: c = 24, h = 1, w = 1, size = 24
-[INFO 2018-06-09 21:49:11,898 layers.py:2716] output for pool6_mbox_conf: c = 12, h = 1, w = 1, size = 12
-*** Aborted at 1528552154 (unix time) try "date -d @1528552154" if you are using GNU date ***
+I0610 21:53:52.202452  3489 Util.cpp:166] commandline:  --use_gpu=False --trainer_count=2 
+W0610 21:53:52.202481  3489 CpuId.h:112] PaddlePaddle wasn't compiled to use avx instructions, but these are available on your machine and could speed up CPU computations via CMAKE .. -DWITH_AVX=ON
+[INFO 2018-06-10 21:53:52,424 layers.py:2716] output for conv1_1: c = 64, h = 300, w = 300, size = 5760000
+[INFO 2018-06-10 21:53:52,425 layers.py:2716] output for conv1_2: c = 64, h = 300, w = 300, size = 5760000
+[INFO 2018-06-10 21:53:52,426 layers.py:2858] output for pool1: c = 64, h = 150, w = 150, size = 1440000
+[INFO 2018-06-10 21:53:52,426 layers.py:2716] output for conv2_1: c = 128, h = 150, w = 150, size = 2880000
+[INFO 2018-06-10 21:53:52,427 layers.py:2716] output for conv2_2: c = 128, h = 150, w = 150, size = 2880000
+[INFO 2018-06-10 21:53:52,427 layers.py:2858] output for pool2: c = 128, h = 75, w = 75, size = 720000
+[INFO 2018-06-10 21:53:52,428 layers.py:2716] output for conv3_1: c = 256, h = 75, w = 75, size = 1440000
+[INFO 2018-06-10 21:53:52,429 layers.py:2716] output for conv3_2: c = 256, h = 75, w = 75, size = 1440000
+[INFO 2018-06-10 21:53:52,429 layers.py:2716] output for conv3_3: c = 256, h = 75, w = 75, size = 1440000
+[INFO 2018-06-10 21:53:52,430 layers.py:2858] output for __pool_0__: c = 256, h = 38, w = 38, size = 369664
+[INFO 2018-06-10 21:53:52,430 layers.py:2716] output for conv4_1: c = 512, h = 38, w = 38, size = 739328
+[INFO 2018-06-10 21:53:52,431 layers.py:2716] output for conv4_2: c = 512, h = 38, w = 38, size = 739328
+[INFO 2018-06-10 21:53:52,432 layers.py:2716] output for conv4_3: c = 512, h = 38, w = 38, size = 739328
+[INFO 2018-06-10 21:53:52,432 layers.py:2858] output for __pool_1__: c = 512, h = 19, w = 19, size = 184832
+[INFO 2018-06-10 21:53:52,433 layers.py:2716] output for conv4_3_norm_mbox_loc: c = 12, h = 38, w = 38, size = 17328
+[INFO 2018-06-10 21:53:52,434 layers.py:2716] output for conv4_3_norm_mbox_conf: c = 6, h = 38, w = 38, size = 8664
+[INFO 2018-06-10 21:53:52,435 layers.py:2716] output for conv5_1: c = 512, h = 19, w = 19, size = 184832
+[INFO 2018-06-10 21:53:52,435 layers.py:2716] output for conv5_2: c = 512, h = 19, w = 19, size = 184832
+[INFO 2018-06-10 21:53:52,436 layers.py:2716] output for conv5_3: c = 512, h = 19, w = 19, size = 184832
+[INFO 2018-06-10 21:53:52,437 layers.py:2858] output for __pool_2__: c = 512, h = 19, w = 19, size = 184832
+[INFO 2018-06-10 21:53:52,438 layers.py:2716] output for fc6: c = 1024, h = 19, w = 19, size = 369664
+[INFO 2018-06-10 21:53:52,439 layers.py:2716] output for fc7: c = 1024, h = 19, w = 19, size = 369664
+[INFO 2018-06-10 21:53:52,440 layers.py:2716] output for fc7_mbox_loc: c = 24, h = 19, w = 19, size = 8664
+[INFO 2018-06-10 21:53:52,440 layers.py:2716] output for fc7_mbox_conf: c = 12, h = 19, w = 19, size = 4332
+[INFO 2018-06-10 21:53:52,441 layers.py:2716] output for conv6_1: c = 256, h = 19, w = 19, size = 92416
+[INFO 2018-06-10 21:53:52,442 layers.py:2716] output for conv6_2: c = 512, h = 10, w = 10, size = 51200
+[INFO 2018-06-10 21:53:52,443 layers.py:2716] output for conv6_2_mbox_loc: c = 24, h = 10, w = 10, size = 2400
+[INFO 2018-06-10 21:53:52,443 layers.py:2716] output for conv6_2_mbox_conf: c = 12, h = 10, w = 10, size = 1200
+[INFO 2018-06-10 21:53:52,444 layers.py:2716] output for conv7_1: c = 128, h = 10, w = 10, size = 12800
+[INFO 2018-06-10 21:53:52,445 layers.py:2716] output for conv7_2: c = 256, h = 5, w = 5, size = 6400
+[INFO 2018-06-10 21:53:52,445 layers.py:2716] output for conv7_2_mbox_loc: c = 24, h = 5, w = 5, size = 600
+[INFO 2018-06-10 21:53:52,446 layers.py:2716] output for conv7_2_mbox_conf: c = 12, h = 5, w = 5, size = 300
+[INFO 2018-06-10 21:53:52,447 layers.py:2716] output for conv8_1: c = 128, h = 5, w = 5, size = 3200
+[INFO 2018-06-10 21:53:52,447 layers.py:2716] output for conv8_2: c = 256, h = 3, w = 3, size = 2304
+[INFO 2018-06-10 21:53:52,448 layers.py:2716] output for conv8_2_mbox_loc: c = 24, h = 3, w = 3, size = 216
+[INFO 2018-06-10 21:53:52,448 layers.py:2716] output for conv8_2_mbox_conf: c = 12, h = 3, w = 3, size = 108
+[INFO 2018-06-10 21:53:52,449 layers.py:2858] output for pool6: c = 256, h = 1, w = 1, size = 256
+[INFO 2018-06-10 21:53:52,450 layers.py:2716] output for pool6_mbox_loc: c = 24, h = 1, w = 1, size = 24
+[INFO 2018-06-10 21:53:52,451 layers.py:2716] output for pool6_mbox_conf: c = 12, h = 1, w = 1, size = 12
+*** Aborted at 1528638834 (unix time) try "date -d @1528638834" if you are using GNU date ***
 PC: @                0x0 (unknown)
-*** SIGFPE (@0x7fb0f66d6f08) received by PID 16122 (TID 0x7fb13b650700) from PID 18446744073548951304; stack trace: ***
-    @     0x7fb13b268390 (unknown)
-    @     0x7fb0f66d6f08 QXcbConnection::touchDeviceForId()
-    @     0x7fb0f66d844d QXcbConnection::xi2SetupDevices()
-    @     0x7fb0f66d8a86 QXcbConnection::initializeXInput2()
-    @     0x7fb0f66b2891 QXcbConnection::QXcbConnection()
-    @     0x7fb0f66b5bad QXcbIntegration::QXcbIntegration()
-    @     0x7fb13b6553ad (unknown)
-    @     0x7fb1123b7d92 QPlatformIntegrationFactory::create()
-    @     0x7fb1123c3fc4 QGuiApplicationPrivate::createPlatformIntegration()
-    @     0x7fb1123c4ecd QGuiApplicationPrivate::createEventDispatcher()
-    @     0x7fb11208c7e6 QCoreApplication::init()
-    @     0x7fb11208c856 QCoreApplication::QCoreApplication()
-    @     0x7fb1123c6cc9 QGuiApplication::QGuiApplication()
-    @     0x7fb1129b1bcd QApplication::QApplication()
-    @     0x7fb117676d48 (unknown)
-    @     0x7fb117684195 cvShowImage
-    @     0x7fb117670669 cv::imshow()
-    @     0x7fb11e54d4b3 (unknown)
+*** SIGFPE (@0x7fe48d86ff08) received by PID 3489 (TID 0x7fe4cb82e700) from PID 18446744071789018888; stack trace: ***
+    @     0x7fe4cb446390 (unknown)
+    @     0x7fe48d86ff08 QXcbConnection::touchDeviceForId()
+    @     0x7fe48d87144d QXcbConnection::xi2SetupDevices()
+    @     0x7fe48d871a86 QXcbConnection::initializeXInput2()
+    @     0x7fe48d84b891 QXcbConnection::QXcbConnection()
+    @     0x7fe48d84ebad QXcbIntegration::QXcbIntegration()
+    @     0x7fe4cb7aa3ad (unknown)
+    @     0x7fe4a28e7d92 QPlatformIntegrationFactory::create()
+    @     0x7fe4a28f3fc4 QGuiApplicationPrivate::createPlatformIntegration()
+    @     0x7fe4a28f4ecd QGuiApplicationPrivate::createEventDispatcher()
+    @     0x7fe4a25bc7e6 QCoreApplication::init()
+    @     0x7fe4a25bc856 QCoreApplication::QCoreApplication()
+    @     0x7fe4a28f6cc9 QGuiApplication::QGuiApplication()
+    @     0x7fe4a2eadbcd QApplication::QApplication()
+    @     0x7fe4a7b72d48 (unknown)
+    @     0x7fe4a7b80195 cvShowImage
+    @     0x7fe4a7b6c669 cv::imshow()
+    @     0x7fe4aea494b3 (unknown)
     @           0x4bc3fa PyEval_EvalFrameEx
     @           0x4b9ab6 PyEval_EvalCodeEx
     @           0x4eb30f (unknown)
     @           0x4e5422 PyRun_FileExFlags
     @           0x4e3cd6 PyRun_SimpleFileExFlags
     @           0x493ae2 Py_Main
-    @     0x7fb13aead830 __libc_start_main
+    @     0x7fe4cb08b830 __libc_start_main
     @           0x4933e9 _start
     @                0x0 (unknown)
-浮点数例外 (核心已转储)
-xiaoqiang@xiaoqiang:~/note10/code$ sudo rm -rf python2
-[sudo] xiaoqiang 的密码： 
-xiaoqiang@xiaoqiang:~/note10/code$ python2
-Python 2.7.12 (default, Dec  4 2017, 14:50:18) 
-[GCC 5.4.0 20160609] on linux2
-Type "help", "copyright", "credits" or "license" for more information.
->>> exit()
-xiaoqiang@xiaoqiang:~/note10/code$ python2
-Python 2.7.12 (default, Dec  4 2017, 14:50:18) 
-[GCC 5.4.0 20160609] on linux2
-Type "help", "copyright", "credits" or "license" for more information.
->>> 
+Floating point exception (core dumped)
