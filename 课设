@@ -2,256 +2,278 @@
 #include <stdlib.h>
 #include <string.h>
 #define Ss struct Student
+#define Sc struct Course
+
+struct Course
+{
+    float Grade_pingshi,Grade_shiyan,Grade_kaoshi,Grade_zongping;
+};
+
+char COURSE[6][7]={"语文","数学","英语","物理","化学","生物"};
 
 struct Student
 {
     char Number[20],Name[20],Class[20];
-    float Grade_pingshi,Grade_shiyan,Grade_kaoshi,Grade_zongping;
+    struct Course *yuwen,*shuxue,*yingyu,*wuli,*huaxue,*shengwu;
     struct Student *next;
-}student;
+};
 
-Ss *head=NULL,*p1,*p2,*p3,*p4,*p5,*p6;
-int n=0;
+Ss *head=NULL,*p1,*p2;
+int n=0,h=0;
 
 void DO_1()//输入信息 完成
 {
     Ss *t;
+    Sc *u;
+
     t=(struct Student *)malloc(sizeof(struct Student));
     t->next=NULL;
     printf("请输入该生的学号：");
     scanf("%s",t->Number);
     printf("请输入该生的姓名：");
     scanf("%s",t->Name);
-    printf("请输入该生的课程名称：");
+    printf("请输入该生的班别：");
     scanf("%s",t->Class);
-    printf("请输入该生的平时成绩：");
-    scanf("%f",&t->Grade_pingshi);
-    printf("请输入该生的实验成绩：");
-    scanf("%f",&t->Grade_shiyan);
-    printf("请输入该生的考试成绩：");
-    scanf("%f",&t->Grade_kaoshi);
-    printf("请输入该生的总评成绩：");
-    scanf("%f",&t->Grade_zongping);
+    u=t->yuwen;u=(struct Course *)malloc(sizeof(struct Course));
+   // u=t;
+    for(int i=0;i<6;i++)
+    {
+        printf("请输入该生%s的平时成绩：",COURSE[i]);
+        scanf("%f",&u->Grade_pingshi);
+        printf("请输入该生%s的实验成绩：",COURSE[i]);
+        scanf("%f",&u->Grade_shiyan);
+        printf("请输入该生%s的考试成绩：",COURSE[i]);
+        scanf("%f",&u->Grade_kaoshi);
+        u++;
+//        printf("请输入该生%s的平时成绩：");
+//        scanf("%f",&t->Grade_pingshi);
+//        printf("请输入该生%s的实验成绩：");
+//        scanf("%f",&t->Grade_shiyan);
+//        printf("请输入该生%s的考试成绩：");
+//        scanf("%f",&t->Grade_kaoshi);
+//        t->Grade_zongping
+    }
     printf("输入完成！\n\n\n\n");
    // t->next=NULL;
     p1->next=t;
     p1=t;
     n++;
 }
-void DO_2()//修改信息 完成
+//void DO_2()//修改信息 完成
+//{
+//    char r[20];
+//    p2=head->next;
+//    printf("您要修改哪个学生的信息？：");
+//    scanf("%s",r);
+//    while(1)
+//    {
+//        if(strcmp(p2->Name,r)==0)
+//        {
+//            printf("请输入该生的学号：");
+//            scanf("%s",p2->Number);
+//            printf("请输入该生的姓名：");
+//            scanf("%s",p2->Name);
+//            printf("请输入该生的课程名称：");
+//            scanf("%s",p2->Class);
+//            printf("请输入该生的平时成绩：");
+//            scanf("%f",&p2->Grade_pingshi);
+//            printf("请输入该生的实验成绩：");
+//            scanf("%f",&p2->Grade_shiyan);
+//            printf("请输入该生的考试成绩：");
+//            scanf("%f",&p2->Grade_kaoshi);
+//            printf("请输入该生的总评成绩：");
+//            scanf("%f",&p2->Grade_zongping);
+//            printf("修改成功！\n\n\n\n");
+//            break;
+//        }
+//        p2=p2->next;
+//        if(!p2)
+//        {
+//            printf("\t\t查无此人！\n\n\n");
+//            break;
+//        }
+//    }
+//}
+//void DO_3()//删除信息 完成
+//{
+//    char r[20];
+//    p2=head->next;
+//    printf("您要删除哪个学生的信息？：");
+//    scanf("%s",r);
+//    while(1)
+//    {
+//        if(strcmp(p2->next->Name,r)==0)
+//        {
+//            p2->next=p2->next->next;
+//            printf("删除成功\n\n");
+//            break;
+//        }
+//        p2=p2->next;
+//        if(!p2->next)
+//        {
+//            printf("\t\t查无此人！\n\n\n");
+//            break;
+//        }
+//    }
+//}
+//void DO_4()//姓名查询 完成
+//{
+//    char r[20];
+//    p2=head->next;
+//    printf("您要查询哪个学生的信息？：");
+//    scanf("%s",r);
+//    while(1)
+//    {
+//        if(strcmp(p2->Name,r)==0)
+//        {
+//            printf("该生的学号为：%s\n",p2->Number);
+//            printf("该生的姓名为：%s\n",p2->Name);
+//            printf("该生的课程名称为：%s\n",p2->Class);
+//            printf("该生的平时成绩为：%.2f\n",p2->Grade_pingshi);
+//            printf("该生的实验成绩为：%.2f\n",p2->Grade_shiyan);
+//            printf("该生的考试成绩为：%.2f\n",p2->Grade_kaoshi);
+//            printf("该生的总评成绩为：%.2f\n",p2->Grade_zongping);;
+//            break;
+//        }
+//        p2=p2->next;
+//        if(!p2)
+//        {
+//            printf("\t\t查无此人！\n\n\n");
+//            break;
+//        }
+//    }
+//}
+//void DO_5()//班级查询 完成
+//{
+//    char r[20];
+//    p2=head->next;
+//    printf("您要查询哪个学生的信息？：");
+//    scanf("%s",r);
+//    while(1)
+//    {
+//        if(strcmp(p2->Name,r)==0)
+//        {
+//            printf("该生的学号为：%s\n",p2->Number);
+//            printf("该生的姓名为：%s\n",p2->Name);
+//            printf("该生的课程名称为：%s\n",p2->Class);
+//            printf("该生的平时成绩为：%.2f\n",p2->Grade_pingshi);
+//            printf("该生的实验成绩为：%.2f\n",p2->Grade_shiyan);
+//            printf("该生的考试成绩为：%.2f\n",p2->Grade_kaoshi);
+//            printf("该生的总评成绩为：%.2f\n",p2->Grade_zongping);
+//            break;
+//        }
+//        p2=p2->next;
+//        if(!p2)
+//        {
+//            printf("\t\t查无此人！\n\n\n");
+//            break;
+//        }
+//    }
+//}
+//void DO_6()//学号查询 完成
+//{
+//    char r[20];
+//    p2=head->next;
+//    printf("您要查询哪个学生的信息？：");
+//    scanf("%s",r);
+//    while(1)
+//    {
+//        if(strcmp(p2->Name,r)==0)
+//        {
+//            printf("该生的学号为：%s\n",p2->Number);
+//            printf("该生的姓名为：%s\n",p2->Name);
+//            printf("该生的课程名称为：%s\n",p2->Class);
+//            printf("该生的平时成绩为：%.2f\n",p2->Grade_pingshi);
+//            printf("该生的实验成绩为：%.2f\n",p2->Grade_shiyan);
+//            printf("该生的考试成绩为：%.2f\n",p2->Grade_kaoshi);
+//            printf("该生的总评成绩为：%.2f\n",p2->Grade_zongping);
+//            break;
+//        }
+//        p2=p2->next;
+//        if(!p2)
+//        {
+//            printf("\t\t查无此人！\n\n\n");
+//            break;
+//        }
+//    }
+//}
+//void DO_7()//课程查询 完成
+//{
+//    char r[20];
+//    p2=head->next;
+//    printf("您要查询哪个学生的信息？：");
+//    scanf("%s",r);
+//    while(1)
+//    {
+//        if(strcmp(p2->Name,r)==0)
+//        {
+//            printf("该生的学号为：%s\n",p2->Number);
+//            printf("该生的姓名为：%s\n",p2->Name);
+//            printf("该生的课程名称为：%s\n",p2->Class);
+//            printf("该生的平时成绩为：%.2f\n",p2->Grade_pingshi);
+//            printf("该生的实验成绩为：%.2f\n",p2->Grade_shiyan);
+//            printf("该生的考试成绩为：%.2f\n",p2->Grade_kaoshi);
+//            printf("该生的总评成绩为：%.2f\n",p2->Grade_zongping);
+//        }
+//        p2=p2->next;
+//        if(!p2)
+//        {
+//            printf("\t\t查无此人！\n\n\n");
+//            break;
+//        }
+//    }
+//}
+//void DO_8()//总分高低排序 完成
+//{
+//    int T=0;
+//    Ss *p3,*p4,*p5,*p6,*p7;
+//    p3=NULL;
+//    while(p3!=head->next->next)
+//    {
+//        for(p4=head;p4->next->next!=p3;p4=p4->next)
+//        {
+//            if(p4->next->Grade_zongping>p4->next->next->Grade_zongping)
+//            {
+//                p5=p4->next;
+//                p6=p4->next->next;
+//                p4->next=p6;
+//                p5->next=p6->next;
+//                p6->next=p5;
+//            }
+//        }
+//        p3=p4->next;
+//    }
+//    p2=head->next;
+//    while(++T)
+//    {
+//            printf(" 第%d名的学号为：%s",T,p2->Number);
+//            printf(" 该生的姓名为：%s",p2->Name);
+//            printf(" 该生的课程名称为：%s",p2->Class);
+//            printf(" 该生的平时成绩为：%.2f",p2->Grade_pingshi);
+//            printf(" 该生的实验成绩为：%.2f",p2->Grade_shiyan);
+//            printf(" 该生的考试成绩为：%.2f",p2->Grade_kaoshi);
+//            printf(" 该生的总评成绩为：%.2f\n",p2->Grade_zongping);;
+//        p2=p2->next;
+//        if(!p2)
+//            break;
+//    }p2=head->next;
+//    for(int i=0;i<n-1;i++)
+//    {
+//        p2=p2->next;
+//    }
+//    p1->next=p2;p1=p2;
+//}
+//void DO_9()//单科成绩排名
+//{
+//    printf("您要依照哪个成绩排名？")
+//}
+//void DO_10()//查询优秀率
+//{
+//
+//}
+void DO_11()
 {
-    char r[20];
-    p2=(struct Student *)malloc(sizeof(struct Student));
-    p2=head;
-    printf("您要修改哪个学生的信息？：");
-    scanf("%s",r);
-    while(1)
-    {
-        if(strcmp(p2->Name,r)==0)
-        {
-            printf("请输入该生的学号：");
-            scanf("%s",p2->Number);
-            printf("请输入该生的姓名：");
-            scanf("%s",p2->Name);
-            printf("请输入该生的课程名称：");
-            scanf("%s",p2->Class);
-            printf("请输入该生的平时成绩：");
-            scanf("%f",&p2->Grade_pingshi);
-            printf("请输入该生的实验成绩：");
-            scanf("%f",&p2->Grade_shiyan);
-            printf("请输入该生的考试成绩：");
-            scanf("%f",&p2->Grade_kaoshi);
-            printf("请输入该生的总评成绩：");
-            scanf("%f",&p2->Grade_zongping);
-            printf("修改成功！\n\n\n\n");
-            break;
-        }
-        p2=p2->next;
-        if(!p2)
-        {
-            printf("\t\t查无此人！\n\n\n");
-            break;
-        }
-    }
-}
-void DO_3()//删除信息 完成
-{
-    char r[20];
-    p2=(struct Student *)malloc(sizeof(struct Student));
-    p2=head;
-    printf("您要删除哪个学生的信息？：");
-    scanf("%s",r);
-    while(1)
-    {
-        if(strcmp(p2->next->Name,r)==0)
-        {
-            p2->next=p2->next->next;
-            printf("删除成功\n\n");
-            break;
-        }
-        p2=p2->next;
-        if(!p2->next)
-        {
-            printf("\t\t查无此人！\n\n\n");
-            break;
-        }
-    }
-}
-void DO_4()//姓名查询 完成
-{
-    char r[20];
-    p2=(struct Student *)malloc(sizeof(struct Student));
-    p2=head;
-    printf("您要查询哪个学生的信息？：");
-    scanf("%s",r);
-    while(1)
-    {
-        if(strcmp(p2->Name,r)==0)
-        {
-            printf("该生的学号为：%s\n",p2->Number);
-            printf("该生的姓名为：%s\n",p2->Name);
-            printf("该生的课程名称为：%s\n",p2->Class);
-            printf("该生的平时成绩为：%.2f\n",p2->Grade_pingshi);
-            printf("该生的实验成绩为：%.2f\n",p2->Grade_shiyan);
-            printf("该生的考试成绩为：%.2f\n",p2->Grade_kaoshi);
-            printf("该生的总评成绩为：%.2f\n",p2->Grade_zongping);;
-            break;
-        }
-        p2=p2->next;
-        if(!p2)
-        {
-            printf("\t\t查无此人！\n\n\n");
-            break;
-        }
-    }
-}
-void DO_5()//班级查询 完成
-{
-    char r[20];
-    p2=(struct Student *)malloc(sizeof(struct Student));
-    p2=head;
-    printf("您要查询哪个学生的信息？：");
-    scanf("%s",r);
-    while(1)
-    {
-        if(strcmp(p2->Name,r)==0)
-        {
-            printf("该生的学号为：%s\n",p2->Number);
-            printf("该生的姓名为：%s\n",p2->Name);
-            printf("该生的课程名称为：%s\n",p2->Class);
-            printf("该生的平时成绩为：%.2f\n",p2->Grade_pingshi);
-            printf("该生的实验成绩为：%.2f\n",p2->Grade_shiyan);
-            printf("该生的考试成绩为：%.2f\n",p2->Grade_kaoshi);
-            printf("该生的总评成绩为：%.2f\n",p2->Grade_zongping);
-            break;
-        }
-        p2=p2->next;
-        if(!p2)
-        {
-            printf("\t\t查无此人！\n\n\n");
-            break;
-        }
-    }
-}
-void DO_6()//学号查询 完成
-{
-    char r[20];
-    p2=(struct Student *)malloc(sizeof(struct Student));
-    p2=head;
-    printf("您要查询哪个学生的信息？：");
-    scanf("%s",r);
-    while(1)
-    {
-        if(strcmp(p2->Name,r)==0)
-        {
-            printf("该生的学号为：%s\n",p2->Number);
-            printf("该生的姓名为：%s\n",p2->Name);
-            printf("该生的课程名称为：%s\n",p2->Class);
-            printf("该生的平时成绩为：%.2f\n",p2->Grade_pingshi);
-            printf("该生的实验成绩为：%.2f\n",p2->Grade_shiyan);
-            printf("该生的考试成绩为：%.2f\n",p2->Grade_kaoshi);
-            printf("该生的总评成绩为：%.2f\n",p2->Grade_zongping);
-            break;
-        }
-        p2=p2->next;
-        if(!p2)
-        {
-            printf("\t\t查无此人！\n\n\n");
-            break;
-        }
-    }
-}
-void DO_7()//课程查询 完成
-{
-    char r[20];
-    p2=(struct Student *)malloc(sizeof(struct Student));
-    p2=head;
-    printf("您要查询哪个学生的信息？：");
-    scanf("%s",r);
-    while(1)
-    {
-        if(strcmp(p2->Name,r)==0)
-        {
-            printf("该生的学号为：%s\n",p2->Number);
-            printf("该生的姓名为：%s\n",p2->Name);
-            printf("该生的课程名称为：%s\n",p2->Class);
-            printf("该生的平时成绩为：%.2f\n",p2->Grade_pingshi);
-            printf("该生的实验成绩为：%.2f\n",p2->Grade_shiyan);
-            printf("该生的考试成绩为：%.2f\n",p2->Grade_kaoshi);
-            printf("该生的总评成绩为：%.2f\n",p2->Grade_zongping);
-        }
-        p2=p2->next;
-        if(!p2)
-        {
-            printf("\t\t查无此人！\n\n\n");
-            break;
-        }
-    }
-}
-void DO_8()//总分高低排序
-{
-    p2=(struct Student *)malloc(sizeof(struct Student));
-    p2=head;
-    for(int i=0;i)
-                            //    void Listsort(Node* & head) {
-                            //    int i = 0;
-                            //    int j = 0;
-                            //    //用于变量链表
-                            //    Node * L = head;
-                            //    //作为一个临时量
-                            //    Node * p;
-                            //    Node * p1;
-                            //    //如果链表为空直接返回
-                            //    if (head->value == 0)return;
-                            //
-                            //    for (i = 0; i < head->value - 1; i++) {
-                            //        L = head->next;
-                            //        for (j = 0; j < head->value - i - 1; j++) {
-                            //            //得到两个值
-                            //            p = L;
-                            //            p1 = L->next;
-                            //            //如果前面的那个比后面的那个大，就交换它们之间的是数据域
-                            //            if (p->value > p1->value) {
-                            //                Elemtype temp = p->value;
-                            //                p->value = p1->value;
-                            //                p1->value = temp;
-                            //            }
-                            //            L = L->next;
-                            //        }
-                            //    }
-                            //}
-}
-void DO_9()//单科成绩排名
-{
-
-}
-void DO_10()//查询优秀率
-{
-
-}
-void DO_11()//退出
-{
-    p3=(struct Student *)malloc(sizeof(struct Student));
+    Ss *p3=(struct Student *)malloc(sizeof(struct Student));
     p3=head->next;
     while(p3)
     {
@@ -262,6 +284,7 @@ void DO_11()//退出
 int main()
 {
     int p,T=0;
+    Sc *o;
     head=(struct Student *)malloc(sizeof(struct Student));
     head->next=NULL;
     p1=head;
@@ -280,51 +303,51 @@ int main()
                 DO_1();
                 break;
             }
-            case 2:
-            {
-                DO_2();
-                break;
-            }
-            case 3:
-            {
-                DO_3();
-                break;
-            }
-            case 4:
-            {
-                DO_4();
-                break;
-            }
-            case 5:
-            {
-                DO_5();
-                break;
-            }
-            case 6:
-            {
-                DO_6();
-                break;
-            }
-            case 7:
-            {
-                DO_7();
-                break;
-            }
-            case 8:
-            {
-                DO_8();
-                break;
-            }
-            case 9:
-            {
-                DO_9();
-                break;
-            }
-            case 10:
-            {
-                DO_10();
-                break;
-            }
+//            case 2:
+//            {
+//                DO_2();
+//                break;
+//            }
+//            case 3:
+//            {
+//                DO_3();
+//                break;
+//            }
+//            case 4:
+//            {
+//                DO_4();
+//                break;
+//            }
+//            case 5:
+//            {
+//                DO_5();
+//                break;
+//            }
+//            case 6:
+//            {
+//                DO_6();
+//                break;
+//            }
+//            case 7:
+//            {
+//                DO_7();
+//                break;
+//            }
+//            case 8:
+//            {
+//                DO_8();
+//                break;
+//            }
+//            case 9:
+//            {
+//                DO_9();
+//                break;
+//            }
+//            case 10:
+//            {
+//                DO_10();
+//                break;
+//            }
             case 11:
             {
                 DO_11();
