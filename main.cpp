@@ -1,60 +1,65 @@
-
 #include "game.h"
-const int ÆåÅÌ = 5;
-const char* IMG_PLANE[5] = { "ÆåÅÌ.jpg", "·É»ú1.jpg","·É»ú2.jpg" ,"·É»ú3.jpg" ,"·É»ú4.jpg" };
-const char* IMG_GAME[6] = { "¿ªÊ¼.jpg","¶ÁÈ¡.jpg","Ñ¡Ôñ.jpg","ÌáÊ¾.jpg","ÆåÅÌ.jpg", "»Ø·Å.jpg" };
+const char* IMG_PLANE[5] = { "æ£‹ç›˜.jpg", "é£æœº1.jpg","é£æœº2.jpg" ,"é£æœº3.jpg" ,"é£æœº4.jpg" };
+const char* IMG_GAME[6] = { "å¼€å§‹.jpg","è¯»å–.jpg","é€‰æ‹©.jpg","æç¤º.jpg","æ£‹ç›˜.jpg", "å›æ”¾.jpg" };
 const char* IMG_EXC = "exc.jpg";
-const char* IMG_DICE[7] = { "dice0.png","dice1.png","dice2.png","dice3.png","dice4.png","dice5.png","dice6.png" };
-const char* FILENAME[4] = { "save1","save1","save2","save3" };
+const char* IMG_DICE[7] = { "dice0.jpg","dice1.jpg","dice2.jpg","dice3.jpg","dice4.jpg","dice5.jpg","dice6.jpg" };
+const char* FILENAME[4] = { "save1.txt","save1.txt","save2.txt","save3.txt" };
 bool SAVE[4];
-const int END[5] = { 999,1,14,27,40 };//¸÷¸öÍæ¼ÒµÄÖÕµã
-const int HOME = -1, READY = 0;
-int map_x[53], map_y[53];//±£´æ¸ñ×ÓµÄ×ø±ê
-IMAGE exc;//¶¯»­
-IMAGE background,dice_img;
+IMAGE exc;//åŠ¨ç”»
+IMAGE background, dice_img;
 
 Mouse mouse;
 Menu menu;
+Game exgame;
 int main()
 {
 	Game game;
-	initgraph(1000, 750);//³õÊ¼»¯ÓÎÏ·´°¿Ú
+	initgraph(1000, 750);//åˆå§‹åŒ–æ¸¸æˆçª—å£
+
 	Initialization();
-	while (game.ai_number<0) {//ÓÎÏ·³õÊ¼»¯
-		loadimage(&background, IMG_GAME[0]);//Éú³É±³¾°Í¼
+	while (game.ai_number < 0) {//æ¸¸æˆåˆå§‹åŒ–
+		loadimage(&background, IMG_GAME[0]);//ç”ŸæˆèƒŒæ™¯å›¾
 		putimage(0, 0, &background);
-		int _mouse_opera = mouse.Start();
+		int _mouse_opera = mouse.Start();//
 		if (_mouse_opera) {
 			loadimage(&background, IMG_GAME[2]);
 			putimage(0, 0, &background);
 			_mouse_opera = mouse.PlayNum();
 			game.ai_number = _mouse_opera;
 			loadimage(&background, IMG_GAME[4]);
-			putimage(0, 0, &background);//ÓÎÏ·ÕıÊ½¿ªÊ¼
+			putimage(0, 0, &background);//æ¸¸æˆæ­£å¼å¼€å§‹
 		}
-		else {//´æµµ½çÃæ
-			loadimage(&background, IMG_GAME[1]);
-			putimage(0, 0, &background);
-			_mouse_opera = mouse.Login();
-			if (_mouse_opera == 4)
-				;
-			else if (SAVE[_mouse_opera])
-				game = menu.LoadStates(_mouse_opera);
-			else {
-				loadimage(NULL, "empty.jpg");
-				Sleep(2000);
-			}
+		else {//å­˜æ¡£ç•Œé¢
+			menu.LoadStates();
+			game = exgame;
 		}
 	}
 	game.Init();
+	Sleep(2000);
 	menu.CB.push(game);
 	while (1) {
-		for (int i = 1; i <= 4; i++) {
-			int step=game.player[i].Dice();
-			int sel=mouse.Running();
-			game.player[i].aircarft[sel].Move(step,game);
+		for (int i =2; i <= 2; i++) {
+			int step = game.player[i].Dice();
+			step = 6;
+			if (step != 6 && !game.player[i].can_move)
+				;
+			else if(!game.player[i].AI()) {
+				int sel,_move;
+				sel = mouse.Running();
+				_move = game.player[i].aircarft[sel].Move(step, game);
+				if (_move== 1)
+					game.player[i].can_move++;
+				else if (_move== 2)
+					;
+				else
+					game.player[i].can_move--;
+			}
 			Sleep(1000);
 		}
+
 	}
-	getch();
+	//for (int i = 1; i <= 52; i++)
+	//	cout << map_x[i] << ' ' << map_y[i]<<"\t"<<i << endl;
+	//_getch();1+52+16+4+6*4
+	return 0;
 }
