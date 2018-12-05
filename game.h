@@ -1,3 +1,4 @@
+#pragma once
 #ifndef GAME_H_FILE
 #define GAME_H_FILE
 #undef UNICODE
@@ -18,91 +19,94 @@ class Game;
 
 
 class Plane {
-	IMAGE img;//·É»úÌùÍ¼
-	int owner;//ÓµÓĞÕâ¼Ü·É»úµÄÈËÊÇË­
-	int number;//Õâ¼Ü·É»úµÄ±àºÅ
-	int x, y;//ÏñËØ×ø±ê
-	int position;//¸ñ×Ó×ø±ê
+	IMAGE img;//é£æœºè´´å›¾
+	int owner;//æ‹¥æœ‰è¿™æ¶é£æœºçš„äººæ˜¯è°
+	int number;//è¿™æ¶é£æœºçš„ç¼–å·
+	int x, y;//åƒç´ åæ ‡
+	int position;//æ ¼å­åæ ‡
+	void MoveShow(int target_position, int spec, int delay);
+	void XYChangeHelper(int target_position);
 public:
 	Plane();
-	Plane(int _owner, int _number);//Ò»¿ªÊ¼Òª°Ñ·É»ú·Åµ½»ùµØÈ¥
-	void Show();//°Ñ·É»úÏÔÊ¾³öÀ´
-	void Move(int step,Game game);//Íæ¼ÒÑ¡Ôñ·É»úÖ®ºó ÒÆ¶¯
-	void LoadSet(int pos);//¶ÁÈ¡ÓÎÏ·  ÉèÖÃº¯Êı
+	Plane(int _owner, int _number);//ä¸€å¼€å§‹è¦æŠŠé£æœºæ”¾åˆ°åŸºåœ°å»
+	void Show();//æŠŠé£æœºæ˜¾ç¤ºå‡ºæ¥
+	int Move(int step, Game game);//ç©å®¶é€‰æ‹©é£æœºä¹‹å ç§»åŠ¨
+	void LoadSet(int pos);//è¯»å–æ¸¸æˆ  è®¾ç½®å‡½æ•°
 	friend
-		class Menu;//ÉèÖÃÓÑÔªMenu£¬±£´æÓÎÏ·¡¢¶ÁÈ¡ÓÎÏ·¼´±£´æ¶ÁÈ¡owner_number_x_yËÄ¸öÖµ,Ò»¹²16ĞĞ
+		class Menu;//è®¾ç½®å‹å…ƒMenuï¼Œä¿å­˜æ¸¸æˆã€è¯»å–æ¸¸æˆå³ä¿å­˜è¯»å–owner_number_x_yå››ä¸ªå€¼,ä¸€å…±16è¡Œ
 };
 
 class Player {
-	int number;//Íæ¼Ò±àºÅ
-	int step;//Íæ¼ÒÒ¡É«×Ó»ñµÃµÄµãÊı
-	bool ai;//1 ÊÇµçÄÔ 0 ÊÇÍæ¼Ò
-	int DiceShow();//Ò¡É«×ÓµÄ¶¯»­-----------------------------
-public:	
-	
+	int number;//ç©å®¶ç¼–å·
+	int step;//ç©å®¶æ‘‡è‰²å­è·å¾—çš„ç‚¹æ•°
+	bool ai;//1 æ˜¯ç”µè„‘ 0 æ˜¯ç©å®¶
+	int DiceShow();//æ‘‡è‰²å­çš„åŠ¨ç”»-----------------------------
+public:
+	int can_move;
 	Player();
-	Player(int _number,bool _ai);
-	Plane aircarft[5];//Ò»¸öÈËÓµÓĞ4¼Ü·É»ú ÎªÁË·½±ã¼ÆËã ÉùÃ÷5¼Ü ÆäÖĞaircarft[0]×÷·Ï
-	int Dice();//Ò¡É«×Ó---------------------------
+	Player(int _number, bool _ai);
+	Plane aircarft[5];//ä¸€ä¸ªäººæ‹¥æœ‰4æ¶é£æœº ä¸ºäº†æ–¹ä¾¿è®¡ç®— å£°æ˜5æ¶ å…¶ä¸­aircarft[0]ä½œåºŸ
+	int Dice();//æ‘‡è‰²å­---------------------------
 
-	void AI();//ÈË»ú¹²Íæ
+	bool AI();//äººæœºå…±ç©
 };
 
 class Game {
-	  
-	IMAGE status;//±£´æ»Ø·ÅµÄÍ¼Æ¬
+
+	IMAGE status;//ä¿å­˜å›æ”¾çš„å›¾ç‰‡
 public:
-	int ai_number;//»úÆ÷ÈËÊıÁ¿
+	int ai_number;//æœºå™¨äººæ•°é‡
 	Game();
-	void Init();//ÓÎÏ·³õÊ¼»¯
-	Player player[5];//ËÄ¸öÍæ¼Ò ÎªÁË·½±ã¼ÆËã ÉùÃ÷5¸öÈË ÆäÖĞplayer[0]×÷·Ï
-	void GameShow();//×¨ÃÅÎª»Ø·Å×öµÄ½Ó¿Ú----------
-	void Block();//Éú³ÉÂ·ÕÏ
+	void Init();//æ¸¸æˆåˆå§‹åŒ–
+	Player player[5];//å››ä¸ªç©å®¶ ä¸ºäº†æ–¹ä¾¿è®¡ç®— å£°æ˜5ä¸ªäºº å…¶ä¸­player[0]ä½œåºŸ
+	void GameShow();//ä¸“é—¨ä¸ºå›æ”¾åšçš„æ¥å£----------
+	void Block();//ç”Ÿæˆè·¯éšœ
 };
 
-class Menu { //²Ëµ¥
-	
-	fstream S_L;//ÎÄ¼şµÄ¶ÁÈ¡
+class Menu { //èœå•
+
+	fstream S_L;//æ–‡ä»¶çš„è¯»å–
 public:
-	stack<Game> CB;//ÓÃÓÚ»Ø·Å
-	void PlayBack();//»Ø·Å
-	Menu();//Ò»¿ªÊ¼Òª¶ÁÈ¡ÎÄ¼ş£¬³õÊ¼»¯Õ»
-	void SaveStates(Game S_game,int t);//±£´æÓÎÏ·
-	Game LoadStates(int t);//¶ÁÈ¡ÓÎÏ·
+	stack<Game> CB;//ç”¨äºå›æ”¾
+	void PlayBack();//å›æ”¾
+	Menu();//ä¸€å¼€å§‹è¦è¯»å–æ–‡ä»¶ï¼Œåˆå§‹åŒ–æ ˆ
+	void SaveStates();//ä¿å­˜æ¸¸æˆ
+	void LoadStates();//è¯»å–æ¸¸æˆ
 };
 
 
-class Mouse {//¶ÔÓÚÊó±êµã»÷ÊÂ¼şµÄ´¦Àí
+class Mouse {//å¯¹äºé¼ æ ‡ç‚¹å‡»äº‹ä»¶çš„å¤„ç†
 	MOUSEMSG msg;
-	bool Judge(int x1, int x2, int y1, int y2, bool add);//ÅĞ¶ÏÊÇ·ñÔÚÇøÓòÄÚ
+	bool Judge(int x1, int x2, int y1, int y2, bool add);//åˆ¤æ–­æ˜¯å¦åœ¨åŒºåŸŸå†…
 public:
-	int Start();//¿ªÊ¼½çÃæµÄµã»÷ÊÂ¼ş-----------------------
+	int Start();//å¼€å§‹ç•Œé¢çš„ç‚¹å‡»äº‹ä»¶-----------------------
 	int PlayNum();
-	int Login();//¶ÁÈ¡ÓÎÏ·µÄµã»÷ÊÂ¼ş
-	void Dice();//Êó±êµã»÷ÖÀÉ«×Ó----------------
-	int Running();//ÓÎÏ·¿ªÊ¼Ö®ºóµÄµã»÷ÊÂ¼ş
-	void PlayBack();//»Ø·ÅÊ±µÄ½çÃæ
+	int Login();//è¯»å–æ¸¸æˆçš„ç‚¹å‡»äº‹ä»¶
+	int Dice();//é¼ æ ‡ç‚¹å‡»æ·è‰²å­----------------
+	int Running();//æ¸¸æˆå¼€å§‹ä¹‹åçš„ç‚¹å‡»äº‹ä»¶
+	int PlayBack();//å›æ”¾æ—¶çš„ç•Œé¢
+	int Save();
 
-	/*×ø±êÏµ±êÃ÷£º(ÒÔÏÂÊı¾İ¾ùX50)
-		6,6-9,9			É«×Ó 
-		1,1-3,3			Íæ¼Ò4
-		12,1-14,3		Íæ¼Ò1
-		1,12-3,14		Íæ¼Ò2
-		12,12-14,14		Íæ¼Ò3
-		16,3-19,4		»Ø·Å 
-		16,6-19,7		±£´æ
-		16,9-19,10		¶ÁÈ¡
-		16,12-19,14		ÍË³ö
-		-------»Ø·Å×´Ì¬
-		16,0-20,6       ÉÏÒ»²½
-		16,8-20,14		»Øµ½ÓÎÏ·
-		-------ÆäËû
-		ÎŞĞ§
+	/*åæ ‡ç³»æ ‡æ˜ï¼š(ä»¥ä¸‹æ•°æ®å‡X50)
+		6,6-9,9			è‰²å­
+		1,1-3,3			ç©å®¶4
+		12,1-14,3		ç©å®¶1
+		1,12-3,14		ç©å®¶2
+		12,12-14,14		ç©å®¶3
+		16,3-19,4		å›æ”¾
+		16,6-19,7		ä¿å­˜
+		16,9-19,10		è¯»å–
+		16,12-19,14		é€€å‡º
+		-------å›æ”¾çŠ¶æ€
+		16,0-20,6       ä¸Šä¸€æ­¥
+		16,8-20,14		å›åˆ°æ¸¸æˆ
+		-------å…¶ä»–
+		æ— æ•ˆ
 	*/
 };
 
 
 
 
-void Initialization();//³õÊ¼»¯ °üÀ¨¸ñ×Ó¡¢´°¿ÚÖ®ÀàµÄ 
+void Initialization();//åˆå§‹åŒ– åŒ…æ‹¬æ ¼å­ã€çª—å£ä¹‹ç±»çš„ 
 #endif
