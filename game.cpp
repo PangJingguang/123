@@ -229,14 +229,14 @@ int Plane::Move(int step, Game game) {
 			step--;
 		}
 		for (int i = 0; i <= step; i++) {
-			if (position > 52 + 16 + 4) {
+			if (position > 52 + 16 + 4) {//如果处于最终跑道
 				int t;
 				if (position + i > 52 + 16 + 4 + 6 * owner) 
-					t = 6 - (position+i-(52 + 16 + 4 + 6 * owner));
+					t = 52 + 16 + 4 + i * (owner-1) + 6 - (position+i-(52 + 16 + 4 + 6 * owner));//超出 END[owner] 的部分
 				else
-					t = i;
-				MoveShow(position + t, 50, 2);
-				XYChangeHelper(position + t);
+					t = position + i;//如果没有超出就按原来的算  如果超出了  就该是52+16+4+i*(owner-1)+超出的部分
+				MoveShow( t, 50, 2);
+				XYChangeHelper(t);
 				Show();//飞机移动
 				Sleep(500);
 				continue;
